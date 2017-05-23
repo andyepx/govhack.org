@@ -1,0 +1,204 @@
+/*=======================
+ GH '16  Theme - Homepage CSS
+ @author AY
+ ========================*/
+ 
+.home-hero {
+
+    text-align: center;
+    background: url('../img/gh-banner1.jpg') scroll no-repeat top center $gh-grey;
+    background-size: auto 100%;
+    padding: $container-default-padding 20px;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    
+    @media screen and (min-width: 600px){
+        background-size: 100% auto;    
+    }
+    
+    dfn {
+        font-style: normal;
+        border-bottom: 1px dashed rgba(240,240,240,.2);
+    }
+    
+    .button, .button-minimal {
+        display: block;
+        width: 100%;
+        margin-bottom: .25em;
+        @media screen and (min-width: 768px){
+            width: auto;
+            margin: 0;
+            display: inline-block;
+        }
+    }
+    
+    // Hack to make it show the ribbon
+    .home-hero-date-counter {
+        visibility: hidden;
+        position: relative;
+        &::after {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            visibility: visible;
+            background: url('../img/event-date-2016.png') center center/contain no-repeat transparent;
+        }
+    }
+    
+    .slick-track {
+        display: flex;
+        align-items: center;
+    }
+    .slick-slide {
+        height: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .slick-dots {
+        bottom: -20px;
+        li.slick-active button::before,
+        li button::before {
+            color: #fff;
+        }
+    }
+    
+}
+
+.home-hero-post-comp {
+    
+    background: url('../img/gh-banner1.jpg') scroll no-repeat top center/cover $gh-grey;
+    padding: $container-default-padding 20px;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    
+    
+    text-align: center;
+    @media screen and (min-width: 800px){
+        text-align: left;
+    }
+    
+    @include hero-heading();
+    
+    a {
+        color: white;
+    }
+    .banner-alt-inner {
+        // padding: $container-default-padding 0 0;
+    }
+    .banner-alt-video {
+        @media screen and (min-width: 800px){
+            padding: 0 $container-default-padding;
+        }
+    }
+}
+
+.home-hero-state-awards {
+    background: url('../img/gh-banner2.jpg') scroll no-repeat center center/cover $gh-grey;
+    padding: $container-default-padding 20px;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    
+    // @include hero-heading();
+    
+    $stateawards-border-width: 4px;
+    $stateawards-padding: 6px 10px;
+    $stateawards-margin: 10px;
+    
+    @include date-panel($stateawards-margin, $stateawards-padding, $stateawards-border-width);
+    
+}
+
+
+//========================================
+
+.home {
+
+    .button {
+        @include button($gh-blue);
+    }
+    
+    .gh-home-tile-header {
+        position: relative;
+        padding-left: $container-md-default-padding;
+        padding-right: $container-md-default-padding;
+    }
+    
+    .gh-home-social-media {
+        display: none;
+        @media screen and (min-width: 768px){
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: $container-md-default-padding;
+            z-index: 99;
+            a, a:visited {
+                text-decoration: none;
+                border: none;
+                color: $gh-lightpink;
+            }
+            a:hover, a:active, a:focus {
+                color: $gh-pink;
+            }
+        }
+    }
+    
+    .home-about {
+    
+        p {
+            font-size: .9em;
+            margin-bottom: 1.15em;
+        }
+    
+        .grid {
+            overflow: visible;          // specially to allow the callout thing
+        }
+    }
+    
+    .gh-lastyear-notice {
+        text-align: center;
+        margin: ($grid-default-margin / 2) 0;
+        font-size: .85em;
+    }
+    
+    .video-wrapper {
+        position: relative;
+        overflow: hidden;
+        &.bottom {
+            padding-bottom: 60px;
+        }
+    }
+    .video-callout {
+        position: absolute;
+        font-family: monospace;
+        font-size: 1.15em;
+        text-align: center;
+        &.bottom {
+            left: 30px;
+            bottom: 20px;
+            width: 300px;
+        }
+        &.left {
+            left: -320px;
+            bottom: -45px;
+            width: 300px;
+        }
+        &::after {
+            content: "";
+            width: 120px;
+            height: 80px;
+            background-size: 120px 80px;
+            background-image: url('../img/arrow-handdrawn.png');
+            position: absolute;
+            right: -55px;
+            top: -10px;
+        }
+        .csstransforms & {
+            transform: rotate(-2deg);
+        }
+    }
+}
+
+#gh-defined dfn {
+    cursor: help;
+}

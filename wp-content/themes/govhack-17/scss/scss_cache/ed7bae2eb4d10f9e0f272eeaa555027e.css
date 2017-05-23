@@ -1,0 +1,67 @@
+/* compiled by scssphp v0.6.3 on Tue, 31 May 2016 13:10:17 +0000 (0.052s) */
+
+/*=======================
+ * GH '16  SITE SWITCHER
+ * @author AY
+ *=======================*/
+/*=======================
+ * Variables SCSS
+ * GH '16  Theme 
+ * @author AY
+ *=======================*/
+/*=======================
+ * Utils - Mixins, reuseable parts, etc.
+ * GH '16  Theme 
+ * @author AY
+ *=======================*/
+.govhack-inline-logo {
+  display: inline-block;
+  height: 1.2em;
+  vertical-align: middle; }
+
+.govhack-inline-logo {
+  margin-top: -3px;
+  width: 20px;
+  background-image: url('../img/inline-logo.png'); }
+
+.muted {
+  color: #848283; }
+
+.wip-alert {
+  font-family: monospace;
+  background: whitesmoke;
+  color: #444;
+  font-size: 1em;
+  padding: 20px 30px;
+  border-left: 6px solid #4c9ad2;
+  border-right: 6px solid #ca1553; }
+/*=======================
+ * Common SCSS - Header, Footer, etc
+ * GH '16  Theme 
+ * @author AY
+ *=======================*/
+.gh-ss {
+  display: none;
+  background: #23282d; }
+  @media screen and (min-width: 600px) {
+  .gh-ss {
+    display: block; } }
+  .gh-ss ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    justify-content: flex-end; }
+    .gh-ss ul li a {
+      display: block;
+      padding: 0.45em 1em;
+      transition: all 0.2s ease;
+      border-bottom: none;
+      color: ghostwhite; }
+      .gh-ss ul li a:hover, .gh-ss ul li a:active, .gh-ss ul li a:focus {
+        background: #848283;
+        color: white; }
+    .gh-ss ul li:nth-child(odd) a {
+      border-top: 3px solid #ca1553; }
+    .gh-ss ul li:nth-child(even) a {
+      border-top: 3px solid #4c9ad2; }

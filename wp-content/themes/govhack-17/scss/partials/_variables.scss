@@ -1,0 +1,91 @@
+/*=======================
+ * Variables SCSS
+ * GH '16  Theme 
+ * @author AY
+ *=======================*/
+ 
+// http://sass-lang.com/documentation/Sass/Script/Functions.html
+
+// Colors
+$color-orange: #f39c12; 
+$color-sunflower: #f1c40f; 
+$color-wet-asphalt: #34495e; 
+$color-midnight-blue: #2c3e50; 
+$color-alizarin: #e74c3c; 
+$color-pomegranate: #c0392b; 
+$color-peter-river: #3498db; 
+$color-belize-hole: #2e8dcc; 
+$color-amethyst: #9b59b6; 
+$color-wisteria: #8e44ad; 
+$color-turquoise: #1abc9c; 
+$color-green-sea: #16a085; 
+$color-emerald: #2ecc71; 
+$color-nephritis: #27ae60; 
+$color-clouds: #ecf0f1; 
+$color-silver: #bdc3c7; 
+$color-concrete: #95a5a6;
+$color-asbestos: #7f8c8d;
+
+// GH colors
+$gh-blue: #4C9AD2;
+$gh-lightblue: lighten($gh-blue, 20%);
+$gh-pink: #CA1553;
+$gh-lightpink: lighten($gh-pink, 20%);
+
+$gh-grey: #848283;
+$gh-lightgrey: lighten($gh-grey, 20%);
+$gh-darkgrey: darken($gh-grey, 30%);
+$gh-darkgrey: #23282D;
+$gh-border-grey: whitesmoke;
+
+$gh-title-color: #333;
+$gh-text-color: #242424;
+$gh-background-color: white;
+
+$gh-hover-background-color: $gh-text-color;
+$gh-hover-text-color: $gh-background-color;
+
+$gh-default-tile-color: #444;
+// Fonts
+
+$title-font: Montserrat, sans-serif;
+$body-font: 'Open Sans', sans-serif;
+$heading-font: $title-font;
+
+// Anchors
+$hover-color: $gh-lightblue;
+
+// Header device
+$gh-headerdevice-container-height: 100px;
+$gh-headerdevice-bar-height: 6px;
+
+// Content area measurements
+$content-area-padding: 2em;
+$container-border-radius: 3.5px;
+$container-default-padding: $content-area-padding;
+$container-md-default-padding: 20px;
+$section-margin: 2em;
+$section-margin-lg: 2em * 2;
+
+
+// Sizes, widths, heights
+$grid-default-margin: 20px;
+$list-menu-item-margin: 0 0 .35em;
+
+$tile-default-height: 180px;
+$tile-under-border-height: 12px;
+$thin-hr-height: 3px;
+$thick-hr-height: 6px;
+
+$mobile-side-padding: 12px;
+
+$sponsorlogo-max-width: 250px;          // assume circa 2-4 tiles per line
+$sponsorlogo-target-ratio: 5;       // width:height
+
+
+// Profile (shortcoded) container
+$profile-image-dimension: 100px;
+$profile-image-border-width: 5px;
+
+// CTA Widget
+$cta-widget-spacing: 16px;

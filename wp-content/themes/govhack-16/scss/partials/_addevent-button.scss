@@ -1,0 +1,29 @@
+/*=======================
+ * AddEvent theme override
+ * GH '16  Theme 
+ * @author AY
+ *=======================*/
+// Note: Original CSS can be found in /lib/addevent/css/theme7.css
+
+.addeventatc.button-minimal {
+    position: relative;
+    @include button-minimal(white);
+    color: #fff !important;     // counteracts the bootstrapped !important style
+    &:hover {
+        color: $gh-darkgrey !important;     // counteracts the bootstrapped !important style
+    }
+    background: transparent;
+    
+    &:hover, 
+    &:active,
+    &.addeventatc-selected    {
+        text-decoration: none;
+    }
+    
+    .addeventatc_dropdown {
+        width: 100%;
+        @media screen and (min-width: 768px){
+            width: 140%;
+        }
+    }
+}

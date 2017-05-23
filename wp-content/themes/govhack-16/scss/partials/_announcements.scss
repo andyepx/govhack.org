@@ -1,0 +1,52 @@
+.gh-announcements {
+
+    &, .extra-spacing & {
+        padding: .9em 20px;
+        @media screen and (min-width: 768px){
+            padding: 1.6em 20px;
+        }
+    }
+    color: white;
+    text-shadow: 0 2px 1px darken($color-belize-hole, 10%);
+    background-color: $color-belize-hole;
+    background-image: linear-gradient(0deg, darken($color-belize-hole, 5%) 10%, $color-belize-hole 90%, darken($color-belize-hole, 5%));
+
+
+    .announcement {
+        
+        margin: 0 0 20px;
+        font-size: .8rem;
+        color: white;
+       
+        @media screen and (min-width: 768px){
+            margin: 0; 
+            font-size: 1rem;
+        }
+    
+        header {
+            font-size: 0.85em;
+            font-weight: bold;
+            font-family: $title-font;
+            color: white;
+            margin: 0 0 0.36em;
+        }
+        .entry-content {
+            font-size: 1.1em;
+            font-weight: 100;
+            padding: 0;
+            color: white;
+            @media screen and (min-width: 768px){
+                font-size: 1em;
+            }
+            a {
+                color: white;
+                white-space: nowrap;
+                border-color: rgba(255,255,255,.8);
+                &:hover, &:focus, &:active {
+                    border-color: white;
+                }
+            }
+        }
+    }
+    
+}

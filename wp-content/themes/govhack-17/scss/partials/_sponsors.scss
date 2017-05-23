@@ -1,0 +1,172 @@
+/*=======================
+ GH '16  Theme - Sponsor related
+ @author AY
+ ========================*/
+
+// The archive is a centered blog reel
+.archive {
+    
+    .gh-archive-header {
+        text-align: center;
+        margin:  0 0 72px;
+        .archive-header-logo {
+            width: 120px;
+            height: auto;
+        }
+        .page-title {
+            margin-top: -.6em;
+        }
+    }
+    
+    .type-sponsors {
+        text-align: center;
+        
+        .post-thumbnail {
+            background: transparent;
+            img {
+                margin: 0 auto;
+            }
+        }
+        
+        .entry-title, .entry-content {
+            display: none;
+        }
+        
+    }
+    
+}
+
+.gh-sponsors {
+
+    // Specifically to force centered layouts 
+    // for sponsor logos
+    body.sponsors-centered & {
+        text-align: center;    
+        
+        @media screen and (min-width: 768px){
+            .grid, .row {
+                display: flex;
+                justify-content: center;
+            }
+            .gh-sponsorship-class {
+                margin: $section-margin-lg 0;
+            }
+        }
+        
+    }
+
+    .gh-sponsor-logo {
+    
+        flex: 0 1 auto;     // prevent grids from auto-growing
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+        @media screen and (min-width: 768px){
+            margin-top: 0;
+            margin-bottom: 0;
+            height: $tile-default-height;        // fix IE11 bug. https://connect.microsoft.com/IE/feedback/details/816293/ie11-flexbox-with-min-height-not-vertically-aligning-with-align-items-center
+            min-height: $tile-default-height;
+            .page-template-region-page & {
+                min-height: $tile-default-height * ( 3 / 4 );
+                // note: width/height restrictions also enforced on inner img
+            }
+        }
+        
+        & > a, 
+        & > img {
+            max-width: 80%;
+        }
+        
+        a {
+            border-bottom: none;
+            outline: none;
+            line-height: 0;
+            text-align: center;
+        }
+        a[target=_blank]::after {
+            content: '';
+        }
+        
+        img {
+            display: inline-block;
+            width: auto !important;
+            height: auto !important;
+            
+            // keep squarer logos nicely boxed... 
+            // allow these logos to be at most 2x the standard 5:1 height
+            
+            max-height: ($sponsorlogo-max-width / $sponsorlogo-target-ratio) * 2.5;     
+            .page-template-region-page & {
+                max-height: ($sponsorlogo-max-width / $sponsorlogo-target-ratio) * 2;       // reduce the growability on a homepage
+            }
+
+        }
+
+        &.unbound img {
+            max-height: none;
+        }
+        
+        &.single img {
+            max-height: ($sponsorlogo-max-width / $sponsorlogo-target-ratio) * 3;
+        }
+
+
+        // Bordered, for visual effect as per 
+        // discussion with JW on 3 July 
+        body.sponsors-boxed & {
+            @media screen and (min-width: 768px){
+                border: 1px solid $gh-lightgrey;
+                border: 1px solid darken($color-clouds, 5%);
+                border-radius: $container-border-radius;
+                padding: 5px 10px;
+                transition: background .4s ease;
+                &:hover {
+                    $sponsors-boxed-bg-inner: lighten($color-clouds, 6%);
+                    $sponsors-boxed-bg-outer: darken($color-clouds, 2%);
+                    background-color: $sponsors-boxed-bg-outer;
+                    // @include radial-gradient( $sponsors-boxed-bg-inner, $sponsors-boxed-bg-outer );
+                }
+                &.single {
+                    img {
+                        max-width: 600px;
+                    }
+                }
+            }
+        }
+        
+    }
+    
+    
+    // was accidentally overlapping two-up (floated) pages
+    clear: both;
+    
+    .gh-sponsors-header {
+        margin-bottom: 1em;
+    }
+    
+    .gh-sponsorship-class {
+        
+        // margin-top: $section-margin;
+        margin-bottom: $section-margin;
+        
+        .gh-sponsorship-class-heading {
+            // &::before {
+                // content: "~/ ";
+                // display: inline;
+                // color: $color-clouds;
+            // }
+            // &::after {
+                // content: " /";
+                // display: inline;
+                // color: $color-clouds;
+            // }
+        }
+        
+    }
+    
+}

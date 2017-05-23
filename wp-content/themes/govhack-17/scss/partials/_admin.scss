@@ -1,0 +1,25 @@
+/*=======================
+ * Environment related stuff not part
+ * of the actual site delivery
+ * GH '16  Theme 
+ * @author AY
+ *=======================*/
+ 
+// Admin bar colors
+#wpadminbar { 
+
+    body.env-nonprod &, 
+    body.env-dev & {
+        background-color: $color-wisteria;  
+    }
+    
+    body.env-staging & {
+        background-color: $color-peter-river; 
+    }
+    
+    body.env-prod & {
+        background-color: $color-pomegranate; 
+    }
+
+}
+ 

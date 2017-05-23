@@ -1,0 +1,74 @@
+/*===========================
+ GH '16  Theme - Region SCSS
+ @author AY
+ ============================*/
+ 
+.region-hero {
+    
+    background-color: $color-wet-asphalt;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    padding: 24px 0;
+    @media screen and (min-width: 768px){
+        padding: 36px 0;
+    }
+
+    &.has-background-image {
+        text-shadow: 0 0 5px rgba(40,40,40,.6);
+    }
+    
+    .hero-header {
+        text-align: center;
+        .hero-heading {
+            margin: 0;
+            font-size: 2em;
+            @media screen and (min-width: 768px){
+                font-size: 3.6em;
+            }
+        }
+        .hero-heading::before {
+            content: '';
+            display: inline-block;
+            @extend %inline-logo;
+            margin-top: -3px;
+            background-image: url('../img/inline-logo-bw.png');
+            background-size: contain;
+        }
+    }
+
+    .content-area {
+        @media screen and (min-width: 1020px){
+            padding-top: 36px;
+            padding-bottom: 36px;
+        }
+    }
+
+}
+
+.region-sponsors-hero {
+    color: $gh-grey;
+    
+    // border-bottom: 2px solid $gh-lightgrey;
+    
+    // background: white;
+    background: $color-clouds;
+    
+    padding-top: 24px;
+    padding-bottom: 0;      // if background white then remove bottom padding
+    @media screen and (min-width: 768px){
+        // padding-bottom: 0;      // if background white then remove bottom padding
+
+        // Also do some alignment to match the page content
+        .region-sponsors {
+            margin-left: -36px;
+            margin-right: -36px;
+            &.gh-sponsors {
+                text-align: left;
+            }
+        }
+
+    }
+    
+}

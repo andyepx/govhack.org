@@ -1,0 +1,148 @@
+/*=======================
+ GH '16  Theme - Tile SCSS
+ @author AY
+ ========================*/
+
+.gh-tiles {
+
+    // margin-top: -$grid-default-margin;      // intentionally a negative margin
+    
+    .tile {
+        display: block;
+        height: $tile-default-height;        // fix IE11 bug. https://connect.microsoft.com/IE/feedback/details/816293/ie11-flexbox-with-min-height-not-vertically-aligning-with-align-items-center
+        min-height: $tile-default-height;
+        
+        text-align: left;
+        color: white;
+        font-weight: normal;
+        background-color: $gh-default-tile-color;
+        background-size: 100% auto;
+        background-position: center right;
+        background-repeat: no-repeat;
+        // border: 2px solid $gh-border-grey;
+        border: none;
+        border-bottom: $tile-under-border-height solid $gh-lightgrey;
+        
+        @media screen and (min-width: 768px) {
+            background-size: cover;
+
+            // Transitions look really dumb on mobile, so this is desktop only...
+            transition: transform .1s linear;
+        
+            // .csstransforms &:focus, 
+            .csstransforms &:hover {
+                transform: scale(1.02);
+            }
+            .csstransforms &:active {
+                transform: scale(.98);
+            }
+
+        }
+        
+        .tile-caption {
+            margin: 0 20px;
+            h3, p {
+                line-height: 1.15;
+                color: inherit;
+            }
+            h3 {
+                margin-bottom: 12px;
+            }
+            p {
+                margin-left: 5px;
+                margin-bottom: 0;
+                // text-align: right;
+            }
+        }
+        
+        // Make shit centred
+        html:not(.flexbox) & {
+            display: table;
+            width: 100%;
+            * {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+        
+        // Or do it the nice, 2016 way
+        .flexbox & {
+            display: flex;
+            align-items: center;
+        }
+        
+        // A flattened one, for introducing the archive site
+        &.tile-flat {
+            border-bottom: none;
+            border-right: $tile-under-border-height solid $gh-lightgrey;
+            min-height: 0;
+        }
+    
+        // Colors
+        &.blue {
+            background-color: $gh-blue;
+            border-color: lighten($gh-blue, 10%);
+        }
+        &.pink {
+            background-color: $gh-pink;
+            border-color: lighten($gh-pink, 10%);
+        }
+        &.grey {
+            background-color: $gh-grey;
+            border-color: lighten($gh-grey, 10%);
+        }
+        &.lightgrey {
+            background-color: $gh-lightgrey;
+            border-color: lighten($gh-lightgrey, 10%);
+        }
+        &.darkgrey {
+            background-color: $gh-darkgrey;
+            border-color: lighten($gh-darkgrey, 10%);
+        }
+        &.white-bordered {
+            color: $gh-grey;
+            background-color: white;
+            border: 1px solid $color-clouds;
+            border-bottom: $tile-under-border-height solid $color-clouds;
+        }
+       
+        
+        &.tile-emphasized {
+            .tile-caption p {
+                font-family: $title-font;
+                font-size: 2.2em;
+                font-weight: bold;
+            }
+            &.gh-blue .tile-caption p {
+                text-shadow: 0 0 8px darken($gh-blue, 10%);
+            }
+            &.gh-pink .tile-caption p {
+                text-shadow: 0 0 8px darken($gh-pink, 10%);
+            }
+        }
+        
+        &.tile-emphasized-well {
+            .tile-caption p {
+                margin-left: 0;
+                padding: 6px 8px;
+                border-radius: $container-border-radius;
+                background: white;
+                // background: rgba(255,255,255,.92);
+                font-weight: bold;
+                font-size: 1.08em;
+                font-style: italic;
+            }
+            &.gh-blue .tile-caption p {
+                color: $gh-blue;
+            }
+            &.gh-pink .tile-caption p {
+                color: $gh-pink;
+            }
+            &.gh-grey .tile-caption p {
+                color: $gh-grey;
+            }
+        }
+        
+    }
+    
+}

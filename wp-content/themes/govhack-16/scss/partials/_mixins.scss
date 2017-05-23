@@ -1,0 +1,233 @@
+/*=======================
+ * Mixins, reuseable parts, etc.
+ * GH '16  Theme 
+ * @author AY
+ *=======================*/
+
+// List menu base 
+%list-menu {
+    list-style: none;
+    padding: 0;
+    li {
+        list-style: none;
+        margin: $list-menu-item-margin;
+        a {
+            padding: .25em .35em;
+            display: block;
+            border-bottom: none;
+            font-style: normal;
+            outline: none;
+            transition: all .2s ease;
+        }
+    }
+}
+
+
+// Little icon-y things
+%inline-logo {
+    display: inline-block;
+    height: 1.2em;
+    width: 1.6em;
+    vertical-align: middle;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+// Containers
+%container {
+    padding: $container-default-padding;
+    border-radius: $container-border-radius;
+}
+ 
+ 
+ 
+// Button mixins
+@mixin button-minimal($button-color){
+    border-color: $button-color;
+    color: $button-color;
+    &:hover, &:focus, &:active {
+        background-color: $button-color;
+        @if (lightness($button-color) > 70) {
+            color: $gh-darkgrey;
+        } @else {
+            color: #ffffff; 
+        }
+    }
+}
+@mixin button($button-color){
+    background-color: $button-color;
+    &:hover, &:focus, &:active {
+        background-color: darken($button-color, 10%);
+    }    
+}
+
+// Radial gradient
+@mixin radial-gradient($color-inner, $color-outer){
+    background: $color-outer;
+    background: -moz-radial-gradient(center, ellipse cover, $color-inner 0%, $color-outer 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, $color-inner 0%, $color-outer 100%);
+    background: radial-gradient(ellipse at center, $color-inner 0%, $color-outer 100%);
+    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-inner', endColorstr='$color-outer',GradientType=1 );
+}
+
+
+@mixin pacman-loading($color: 'blue'){
+    @if $color == 'pink' {
+        background-image: url('../img/loading-ghpink.gif');
+    } @else {
+        background-image: url('../img/loading-ghblue.gif');
+    }
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+}
+
+@mixin hero-heading($base-size: 1.2em){
+    h1 {
+        line-height: 1.15;
+        span {
+            @media screen and (min-width: 800px){
+                display: block;
+                font-size: $base-size;
+                line-height: 1;
+            }
+            @media screen and (min-width: 1020px){
+                font-size: $base-size * 1.2;
+            }
+        }
+    }
+}
+
+@mixin date-panel($margin: 10px, $padding: 6px 10px, $border-width: 4px){
+    .date-panel {
+        
+        width: 300px;
+        max-width: 100%;
+        height: 160px;
+
+        margin: $margin auto;
+
+        @media screen and (min-width: 768px){
+            width: 180px;
+            float: left;
+            margin: $margin;
+        }
+        
+        
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    
+        border: $border-width solid white;
+        border-radius: 4px;
+        
+        color: white;
+        font-size: 1.2em;
+        font-weight: bold;
+        
+        a {
+            &, &:link, &:visited {
+                color: whitesmoke;
+                border-bottom-color: transparent;
+            }
+            &:hover {
+                color: white;
+                border-bottom-color: whitesmoke;
+            }
+        }
+    
+        header {
+            padding: $padding;
+            border-bottom: $border-width solid white;
+            text-transform: uppercase;
+            font-size: .8em;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        footer {
+            padding: $padding;
+            border-top: $border-width solid white;
+            font-size: .8em;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        div {
+            padding: $padding;
+        }
+        .day, .month {
+            display: inline-block;
+            vertical-align: top;
+            line-height: 1;
+        }
+        .day {
+            font-size: 3.2em;
+            font-size: 66px;
+        }
+        .month {
+            text-transform: uppercase;
+            font-size: 1.6em;
+            font-size: 32px;
+            margin-top: .2em;
+            margin-top: 8px;
+        }
+    }
+}
+
+
+// Noselect
+%noselect {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;        
+}
+ 
+ 
+// Stuff that modifies presentation
+@mixin muted {
+    color: $gh-grey;
+}
+
+@mixin blur($px){
+    -webkit-filter: blur($px);
+    -moz-filter: blur($px);
+    -o-filter: blur($px);
+    -ms-filter: blur($px);
+    filter: blur($px);
+}
+
+// Animations
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}

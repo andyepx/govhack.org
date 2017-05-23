@@ -1,0 +1,43 @@
+[
+    {
+        "name": "top row",
+        "tiles": [
+            {
+                "pageName": "grid-pa2ge",
+                "caption": "1",
+                "color": "gh-pink"
+            },
+            {
+                "pageName": "layouts2",
+                "caption": "2",
+                "color": "blue"
+            },
+            {
+                "pageName": "grid-page",
+                "caption": "3",
+                "color": "gh-blue"
+            }
+        ]
+    },
+    {
+        "name": "second row",
+        "tiles": [
+            {
+                "pageName": "grid-page",
+                "caption": "4",
+                "color": "gh-pink"
+            },
+            {
+                "pageName": "layouts2",
+                "caption": "5",
+                "color": "blue"
+            },
+            {
+                "pageName": "grid-page",
+                "caption": "6",
+                "color": "gh-blue"
+            }
+        ]
+    }
+
+]

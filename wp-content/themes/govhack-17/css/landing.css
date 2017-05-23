@@ -1,0 +1,87 @@
+/*=======================
+ * GH '16  Landing Pages
+ * @author AY
+ *=======================*/
+/*=======================
+ * Variables SCSS
+ * GH '16  Theme 
+ * @author AY
+ *=======================*/
+/*=======================
+ * Mixins, reuseable parts, etc.
+ * GH '16  Theme 
+ * @author AY
+ *=======================*/
+body.gh-landing .site .site-header {
+  display: none;
+  background-image: none;
+  background-position: center center;
+  background-color: #23282D; }
+
+.landing-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #23282D;
+  padding: 2em 20px;
+  min-height: 140px;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  -webkit-filter: saturate(60%);
+  /* Chrome, Safari, Opera */
+  filter: saturate(60%);
+  transition: filter 0.2s ease; }
+  @media screen and (min-width: 768px) {
+    .landing-hero {
+      min-height: 40vh;
+      padding: 4em 20px 2em; } }
+  .landing-hero::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0; }
+  .flexbox .landing-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .landing-hero .hero-header {
+    margin: 0 0 .5em; }
+  .landing-hero .hero-heading {
+    font-family: Montserrat, sans-serif;
+    font-size: 2em;
+    line-height: 1.15; }
+  .landing-hero .hero-subheading {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+    font-weight: 100;
+    font-style: italic; }
+  .landing-hero .hero-cta {
+    font-size: 0.9em;
+    margin: 1em 0; }
+  @media screen and (min-width: 768px) {
+    .landing-hero {
+      min-height: 300px; }
+      .landing-hero .hero-heading {
+        font-size: 3.25em; }
+      .landing-hero .hero-subheading {
+        font-size: 2em; }
+      .landing-hero .hero-cta {
+        font-size: 1.15em; } }
+
+.landing-content .content-area {
+  position: relative; }
+  .landing-content .content-area img.sticky-bottom {
+    position: relative;
+    bottom: -2.8em; }
+  .landing-content .content-area p img.sticky-bottom {
+    margin-bottom: -28.5px;
+    margin-bottom: calc(-24px - 0.35em); }
+.landing-content .content-area-gray {
+  color: #95a5a6; }

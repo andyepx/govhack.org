@@ -1,0 +1,112 @@
+/*=======================
+ GH '16  Theme - Sponsor related
+ @author AY
+ ========================*/
+
+// The archive is a centered blog reel
+.archive {
+    
+    .gh-archive-header {
+        text-align: center;
+        margin:  0 0 72px;
+        .archive-header-logo {
+            width: 120px;
+            height: auto;
+        }
+        .page-title {
+            margin-top: -.6em;
+        }
+    }
+    
+    .type-sponsors {
+        text-align: center;
+        
+        .post-thumbnail {
+            background: transparent;
+            img {
+                margin: 0 auto;
+            }
+        }
+        
+        .entry-title, .entry-content {
+            display: none;
+        }
+        
+    }
+    
+}
+
+.gh-sponsors {
+
+    clear: both;
+
+    .grid {
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .gh-sponsorship-class {
+        
+        margin: $section-margin 0;
+        
+        .gh-sponsorship-class-heading {
+            // &::before {
+                // content: "~/ ";
+                // display: inline;
+                // color: $color-clouds;
+            // }
+            // &::after {
+                // content: " /";
+                // display: inline;
+                // color: $color-clouds;
+            // }
+        }
+        
+    }
+    
+    .gh-sponsor-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        a {
+            border-bottom: none;
+            outline: none;
+        }
+        a[target=_blank]::after {
+            content: '';
+        }
+        
+        img {
+            width: auto;
+            max-height: $tile-default-height;
+        }
+        
+        &.single {
+            img {
+                max-width: 600px;
+            }
+        }
+        
+    }
+    
+    
+    // Home and centered modifiers
+    
+    .home &, &.centered {
+        text-align: center;    
+        
+        @media screen and (min-width: 768px){
+            .grid {
+                justify-content: center;
+            }
+            .gh-sponsorship-class {
+                margin: $section-margin-lg 0;
+            }
+        }
+        
+    }
+
+}
+
+

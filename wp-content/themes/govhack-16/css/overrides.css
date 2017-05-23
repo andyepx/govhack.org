@@ -1,0 +1,139 @@
+/*=======================
+ * GH '16 overrides for sequential 
+ * @author AY
+ *=======================*/
+/*=======================
+ * Variables SCSS
+ * GH '16  Theme 
+ * @author AY
+ *=======================*/
+/*=======================
+ * Retrofit SCSS
+ * These are resets that override stuff that 
+ * was set in the parent WP theme
+ * GH '16  Theme 
+ * @author AY
+ *=======================*/
+body {
+  background: #23282D;
+  line-height: 1.35; }
+
+h1 a:hover, h1 a:focus, h1 a:active, h2 a:hover, h2 a:focus, h2 a:active, h3 a:hover, h3 a:focus, h3 a:active, h4 a:hover, h4 a:focus, h4 a:active, h5 a:hover, h5 a:focus, h5 a:active, h6 a:hover, h6 a:focus, h6 a:active {
+  color: #9ec8e6; }
+
+h1 {
+  font-size: 1.7em; }
+  @media screen and (min-width: 768px) {
+    h1 {
+      font-size: 2.25em; } }
+
+a {
+  color: #4C9AD2; }
+  a:hover, a:focus, a:active {
+    color: #2a73a7; }
+
+a[role=button] {
+  cursor: pointer; }
+
+a[target=_blank]::after {
+  content: "\f08e";
+  display: inline-block;
+  margin-left: .38em;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+input, select, textarea {
+  border-radius: 2px; }
+
+.site {
+  background: white; }
+
+.site .site-header {
+  background-color: #23282D;
+  padding-bottom: 0; }
+
+.site .site-footer,
+.site .footer-navigation {
+  background: white;
+  color: #242424; }
+  .site .site-footer a,
+  .site .footer-navigation a {
+    color: #242424; }
+
+.footer-widget-area {
+  background: transparent; }
+
+.site-footer::before {
+  display: none; }
+
+.widgettitle, .widget-title {
+  line-height: 1.15; }
+
+@media screen and (min-width: 1020px) {
+  body:not(.full-width-layout) .content-area, .archive .hentry, .blog .hentry, .extra-spacing .entry-content, .extra-spacing .entry-header, .footer-widget-area, .front-page-block, .grid-area, .search .hentry, .widget-area {
+    padding-top: 36px; } }
+
+.grid.grid-pad {
+  padding-top: 0; }
+  .grid.grid-pad *:first-child .tile {
+    margin-top: 0; }
+  .grid.grid-pad [class*=col-1-3]:last-child {
+    margin-bottom: 0; }
+  @media screen and (min-width: 767px) {
+    .grid.grid-pad {
+      padding-top: 20px; } }
+
+.row.row-fluid {
+  max-width: none; }
+
+.row {
+  padding-left: 0;
+  padding-right: 0; }
+  @media screen and (min-width: 768px) {
+    .row {
+      padding-left: 20px;
+      padding-right: 20px; } }
+  @media screen and (min-width: 768px) {
+    .row + .row {
+      margin-top: 20px; } }
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  background: white;
+  border-radius: 0;
+  border: 1px solid #b7b5b6;
+  color: #848283; }
+
+.search-form::before {
+  background: #CA1553; }
+.search-form.hover::before {
+  background: #9c1040; }
+
+.hero {
+  background-color: #4C9AD2; }
+
+.footer-navigation,
+.site-footer {
+  background-color: #4C9AD2;
+  line-height: 1.4; }
+
+/*=======================
+ * Sensible SCSS
+ * These are sensible defaults, I personally think it makes stuff look better
+ * For the purposes of overriding stuff that was set in the parent WP theme
+ * GH '16  Theme 
+ * @author AY
+ *=======================*/
+.content-area h1, .content-area h2, .content-area h3, .content-area h4, .content-area h5, .content-area h6 {
+  font-weight: 300; }
+
+a.button.gh-pink {
+  background: #CA1553; }
+a.button.gh-pink:hover, a.button.gh-pink:focus, a.button.gh-pink:active {
+  background: #9c1040; }
+a.button.gh-blue {
+  background: #4C9AD2; }
+a.button.gh-blue:hover, a.button.gh-blue:focus, a.button.gh-blue:active {
+  background: #2f81bc; }

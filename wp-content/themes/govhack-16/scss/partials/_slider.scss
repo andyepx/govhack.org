@@ -1,0 +1,56 @@
+/*=======================
+ * Slider SCSS
+ * GH '16  Theme 
+ * @author AY
+ *=======================*/
+
+.gh-slider {
+
+}
+
+.gh-slider-nav {
+    position: relative;
+    text-align: left;
+    &::after {
+        display: block;
+        content: '⊲ Swipe ⊳';
+        color: $gh-lightgrey;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    a, [role=button] {
+        display: inline-block;
+        color: $gh-lightgrey;
+        cursor: pointer;
+        &.active, &:active, &:hover {
+            color: $gh-darkgrey;
+        }
+    }
+
+    // responsive first; on mobile hide non-active labels
+    a, [role=button] {
+        display: none;
+        &.active {
+            display: inline-block;  
+        }
+    }
+
+    @media screen and (min-width: 768px){
+        &::after {
+            display: none;
+        }
+        a, [role=button] {
+            display: inline-block;
+        }
+        a + a::before,
+        [role=button] + [role=button]::before {
+            content: '|';
+            color: $color-clouds;
+            margin-left: .8em;
+            margin-right: 1em;
+            display: inline-block;
+        }
+    }
+}

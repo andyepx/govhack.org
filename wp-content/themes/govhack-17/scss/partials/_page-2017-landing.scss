@@ -1,0 +1,197 @@
+body {
+  &.page-template-2017-landing {
+    .gh-ss {
+      display: none !important;
+    }
+    &:before {
+      display: none !important;
+    }
+  }
+}
+
+#content.landing-full-width {
+  width: 100%;
+  padding: 0;
+}
+
+#landingPage {
+
+  position: relative;
+
+  header {
+
+    padding-top: 15px;
+    background: rgba(0, 0, 0, .7);
+    transition: background .5s ease-in;
+    height: 150px;
+    color: white;
+    font-family: Montserrat, 'Open Sans', sans-serif;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    &.fixed {
+      position: fixed;
+      background: rgba(0, 0, 0, 1);
+    }
+
+    a.logo {
+      border-bottom: none;
+    }
+
+    svg {
+      height: 120px;
+      width: 150px;
+    }
+
+    .large-title {
+      font-size: 2rem;
+      color: white;
+      padding-top: 15px;
+
+      .blue {
+        color: $gh-blue;
+      }
+      .pink {
+        color: $gh-pink;
+      }
+    }
+
+  }
+
+  a.button, button {
+    color: white;
+    border: none;
+    padding: .5rem;
+    border-radius: 8px;
+    margin-top: 40px;
+    margin-left: .5rem;
+
+    &:hover {
+      opacity: .9;
+    }
+
+    &.pink {
+      background: $gh-pink;
+    }
+    &.blue {
+      background: $gh-blue;
+    }
+  }
+
+  form#subscribe {
+    display: flex;
+    input {
+      display: inline-block;
+      width: 70%;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 1.1rem;
+      &::-webkit-input-placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      &::-moz-placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      &:-ms-input-placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+    button {
+      display: inline-block;
+      width: 25%;
+      margin: 0 5px;
+      height: 50px;
+    }
+  }
+
+  .landing-content {
+
+    width: 100%;
+    height: 600px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:first-of-type {
+      .row {
+        padding-top: 90px;
+      }
+    }
+
+    a {
+      margin: 0;
+      padding: .5rem 1rem;
+      display: inline-block;
+    }
+
+    h2 {
+      font-size: 3rem;
+      font-family: Montserrat, 'Open Sans', sans-serif;
+      color: white;
+    }
+
+    &.landing1 {
+      background: url(/wp-content/themes/govhack-17/img/2017/landing_1_extended.jpg);
+      background-size: cover;
+    }
+    &.landing2 {
+      background: url(/wp-content/themes/govhack-17/img/2017/landing_2.jpg);
+      background-size: cover;
+    }
+    &.landing3 {
+      background: url(/wp-content/themes/govhack-17/img/2017/landing_3.jpg);
+      background-size: cover;
+    }
+
+  }
+
+}
+
+@media all and (max-width: 700px) {
+  #landingPage {
+
+    header {
+      text-align: center;
+      height: 390px;
+      padding: 10px;
+
+      &.fixed {
+        position: absolute;
+        background: rgba(0, 0, 0, .7);
+      }
+
+      button {
+        margin-top: 10px;
+        white-space: nowrap;
+      }
+    }
+    .landing-content {
+      padding: 30px;
+
+      &:first-of-type {
+        padding-top: 300px;
+        height: 850px;
+      }
+
+      &.landing1 {
+        background: url(/wp-content/themes/govhack-17/img/2017/landing_1-mobile.jpg);
+        background-size: cover;
+      }
+      &.landing2 {
+        background: url(/wp-content/themes/govhack-17/img/2017/landing_2-mobile.jpg);
+        background-size: cover;
+      }
+      &.landing3 {
+        background: url(/wp-content/themes/govhack-17/img/2017/landing_3-mobile.jpg);
+        background-size: cover;
+      }
+    }
+  }
+}

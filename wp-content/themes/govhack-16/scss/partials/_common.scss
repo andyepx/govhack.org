@@ -1,0 +1,398 @@
+/*=======================
+ * Common SCSS - Header, Footer, etc
+ * GH '16  Theme 
+ * @author AY
+ *=======================*/
+
+.site .site-header {
+    position: relative;
+
+    // box-shadow: inset 0 -2px 2px rgba(0,0,0,0.3);
+    // border-bottom: 2px solid #ededed;
+    
+    background-image: url('https://s3-ap-southeast-2.amazonaws.com/assets.govhack.org/img/www-backgrounds/redcarpet-stevecollis.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    
+    // Override header image for certain pages
+    .home &,
+    .page-template-region-page & {
+        background: url('../img/bg/crowd-connections-fade.jpg') no-repeat center -20px white;
+        // background: #b31d4c;    // To match the "2016 Review" cover page color
+        // background: gainsboro;
+        // background: url('https://assets.govhack.org/img/www-backgrounds/stars.jpg') repeat top left/auto transparent;
+    }
+    
+    &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: '';
+        display: block;
+        height: 12px;
+        pointer-events: none;
+        background: none transparent;
+        background-image: linear-gradient(0, rgba(180,180,180,.2), transparent 60%);
+        z-index: 900;
+    }
+    
+    .searchbar-wrapper {
+    
+        display: none;          // Don't display on mobile
+        position: relative;
+        z-index: 300;
+        
+        .search-form {
+        
+            opacity: .8;
+            &:hover, &:active, &:focus {
+                opacity: 1;
+            }
+            
+            transition: all .2s ease;
+        
+            @media screen and (min-width: 1020px){
+                position: absolute;
+                top: 6px;
+                right: 0;
+                width: 400px;
+            }
+            
+            .search-field {
+                padding-top: 8px;
+                padding-bottom: 8px;
+            }
+            
+        }
+        
+        
+        @media screen and (min-width: 767px) {
+            position: relative;
+            display: block;
+        }
+        
+    }
+}
+
+// GovHack Header Device
+.gh-headerdevice-container {
+    position: relative;
+    height: $gh-headerdevice-container-height * 1.45;
+    overflow: hidden;           // specifically need to hide the boxes that poke out
+    z-index: 200;
+    
+    @media screen and (min-width: 600px){
+        height: $gh-headerdevice-container-height * 1.45;
+    }
+    @media screen and (min-width: 767px){
+        height: $gh-headerdevice-container-height * 1.4;
+    }
+    
+    
+    .gh-headerdevice {
+
+        background: white;
+        position: absolute;
+        bottom: 0;
+        
+        width: 240px;
+        height: $gh-headerdevice-container-height;
+        padding: ($gh-headerdevice-container-height * .2);
+        
+        text-align: center;
+        font-weight: 400;
+        
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        
+        box-shadow: 0 0 3px rgba(0,0,0,0.2);
+        
+        // All descendents to have their translateZ normalized
+        * {
+            transform: translateZ(0);
+            text-align: center;
+            font-weight: 100;
+        }
+        .headline {
+            display: block;
+            color: #333;
+            font-size: 1.25em;
+        }
+        .subheadline {
+            display: block;
+            color: $gh-lightgrey;
+            font-size: .95em;
+        }
+        
+    }
+    
+    // Funky pink and blue bar things
+    .gh-headerdevice {
+        // For the logo device box thing, color bars need to be 50% each
+        &.dual-color {
+            &.pink, &.blue {
+                &::before, &::after {
+                    width: 50%;
+                }
+            }
+        }
+        
+        &.blue::before {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 100%;
+            height: $gh-headerdevice-bar-height;
+            left: 0;
+            top: 0;
+            background-color: $gh-blue;
+        }
+        
+        &.pink::after {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 100%;
+            height: $gh-headerdevice-bar-height;
+            right: 0;
+            top: 0;
+            background-color: $gh-pink;
+        }
+    }
+    
+    a.gh-headerdevice {
+        &:hover {
+            box-shadow: 0 0 13px rgba(60,60,60,.6);
+        }
+    }
+    
+    .gh-headerdevice-1 {
+        width: 100%;
+        height: $gh-headerdevice-container-height * 1.25;
+        @media screen and (min-width: 767px) {
+            width: 400px;
+            margin-left: 0;
+        }
+    }
+    
+    .gh-headerdevice-2, 
+    .gh-headerdevice-3, 
+    .gh-headerdevice-4 {
+        display: none;
+        padding: ($gh-headerdevice-container-height * .1);
+        &:hover {
+            bottom: 3px;
+        }
+    }
+
+    
+    // Detect using modernizr first
+    .csstransforms & {
+        .gh-headerdevice-1 {
+            left: 0;
+            margin-left: -5px;
+            height: $gh-headerdevice-container-height * 1.55;
+            transform: rotate(-3deg) translateX(5px) translateY(50px) translateZ(0);
+            z-index: 80;
+            @media screen and (min-width: 600px){
+                width: 420px;
+                height: $gh-headerdevice-container-height * 1.65;
+            }
+            @media screen and (min-width: 768px) {
+                width: 400px;
+                margin-left: 0;
+                height: $gh-headerdevice-container-height * 1.6;
+            }
+        }
+        
+        // Homepage since March 2017
+        .gh-headerdevice-1 {
+            height: $gh-headerdevice-container-height * 1.8;
+            @media screen and (min-width: 1024px){
+                height: $gh-headerdevice-container-height * 1.6;
+            }
+        }
+        
+        .gh-headerdevice-2 {
+            display: none;
+            @media screen and (min-width: 1020px) {
+                display: block;
+                left: 380px;
+                width: 18%;
+                height: $gh-headerdevice-container-height * 1.05;
+                transform: rotate(0deg) translateY(40px) translateZ(0);
+                background: linear-gradient(60deg, rgba(220,220,220,.3) 0%, transparent 30%, transparent 70%, rgba(220,220,220,.3) 100%) white;
+                z-index: 20;
+            }
+        }
+        .gh-headerdevice-3 {
+            display: none;
+            @media screen and (min-width: 1020px) {
+                display: block;
+                right: 30%;
+                width: 24%;
+                height: $gh-headerdevice-container-height * 1.2;
+                transform: rotate(-3deg) translateY(50px) translateZ(0);
+                background: linear-gradient(280deg, rgba(220,220,220,.2) 0%, transparent 40%) white;
+                z-index: 40;
+            }
+        }
+        .gh-headerdevice-4 {
+            display: none;
+            @media screen and (min-width: 600px) {
+                display: block;
+                right: 0;
+                width: 45%;
+                height: $gh-headerdevice-container-height * 1.2;
+                transform: rotate(1deg) translateY(40px) translateZ(0);
+                z-index: 60;
+            }
+            @media screen and (min-width: 768px) {
+                right: 2%;
+            }
+            @media screen and (min-width: 1020px) {
+                right: 8%;
+                width: 24%;
+                transform: rotate(4deg) translateY(50px) translateZ(0);
+            }
+            
+        }    
+    }
+    
+}
+
+
+//==============
+// Header menu
+// Note: For Max Mega Menu configuration, perform this in the plugin admin console thingy
+//==============
+.main-navigation {
+
+    width: 100%;
+    margin: 0;
+    float: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: auto;
+    z-index: 999;
+    pointer-events: none;
+    
+    @media screen and (min-width: 767px) {
+        top: auto;
+        bottom: 0;
+    }
+    @media screen and (min-width: 1020px) {
+        margin-right: 0;
+    }
+    
+    .mega-menu-toggle, .mega-menu-item, .mega-menu-megamenu {
+        pointer-events: all;
+    }
+
+}
+.gh-megamenu-toggle {
+    padding: 6px 10px;
+    &:hover {
+        background-color: $gh-darkgrey;
+    }
+}
+
+// Footer 
+.site .site-footer {
+
+    // Cater for nostalgia - from the old website.
+    padding-top: 112px;
+    background: url('../img/footer-top-decor.png') no-repeat scroll center 16px transparent;
+    font-size: .86rem;
+    
+    .textwidget {
+        font-size: .78rem;
+    }
+    
+    p {
+        margin-bottom: 15px;
+    }
+    
+    .site-info {
+        padding-bottom: 40px;
+        color: $gh-lightgrey;
+    }
+
+    .footer-widget-area {
+
+        text-align: left;
+        background: url('../img/footer-decor.png') no-repeat scroll center bottom transparent;
+
+        @media screen and (min-width: 1020px) {
+            padding-top: 0;
+        }
+        
+        &, button, input, select, textarea {
+            color: $gh-text-color;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: $gh-title-color;
+        }
+        
+        .widgettitle, .widget-title {
+            line-height: 1em;
+        }
+        
+        // .menu {
+            // text-align: center;
+            // @media screen and (min-width: 768px) {
+                // text-align: left;
+            // }
+        // }
+        
+        .widget_nav_menu li {
+            padding: 0;
+            display: inline-block;
+            @media screen and (min-width: 768px){
+                display: block;
+            }
+            
+            a {
+                display: block;
+                padding: .6em 1em;
+                margin-left: -.3em;
+                transition: all .25s ease;
+                border-radius: 2px;
+                @media screen and (min-width: 768px){
+                    padding: .3em .4em;                    
+                }
+            }
+            a:hover, a:focus, a:active {
+                color: white;
+                background: $gh-grey;
+            }
+        }
+        
+    }
+    
+        
+    .footer-navigation {
+    
+        .menu-item {
+            display: inline-block;
+            text-align: center; 
+        }
+        
+        @media screen and (min-width: 768px){
+            padding: 6px 0 0;
+        
+            .menu-item:not(:last-child)::after {
+                content: "-";
+                display: inline-block;
+                margin-left: 1.6em;
+                opacity: .6;
+            }
+        }
+        
+    }
+    
+}

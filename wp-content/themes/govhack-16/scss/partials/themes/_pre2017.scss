@@ -1,0 +1,47 @@
+.home-hero-pre2017 {
+    text-align: center;
+    background: url('../img/rca-crowd-bottom.jpg') no-repeat center center/cover transparent;
+    
+    @media screen and (min-width: 768px) {
+        h1 {
+            font-size: 3em;
+        }
+        text-align: left;
+        background: url('../img/rca-crowd-bottom.jpg') no-repeat center top/cover transparent;
+    }
+    
+    .gh-pre2017-pin-map {
+        display: block;
+        margin: 0 auto;
+        width: 240px;
+        height: auto;
+        @media screen and (min-width: 1024px) {
+            width: 320px;
+            height: auto;
+            margin-left: -25px;
+        }
+    }
+    
+    .gh-2016-review-coverpage {
+        display: block;
+        margin: 0 auto;
+        width: 280px;
+        transform: rotate(-2deg);
+        @media screen and (min-width: 768px) {
+            width: 200px;
+            margin-left: -25px;
+        }
+    }
+
+    .hero-inner {
+        margin: 20px 0;
+    }
+    
+}
+
+.home-hero-pre2017 {
+    a:not([class^=button]) {
+        text-decoration: none;
+        border: none;
+    }
+}

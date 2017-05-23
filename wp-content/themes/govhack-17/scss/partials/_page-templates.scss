@@ -1,0 +1,310 @@
+/*=======================
+ GH '16  Theme - Page Template mods
+ @author AY
+ ========================*/
+
+
+// Default page page -- overrides
+body.no-sidebar .widget-area {
+    display: none;
+}
+
+// Hide the header/footer on templates tagged as such
+body.no-header-footer {
+    .site-header, .site-footer {
+        display: none;
+    }
+}
+
+// "two-up" refers to a forced UI where even though it's .full-width-layout, 
+// we want to display a section that has a traditional sidebar and content
+
+body:not(.full-width-layout):not(.no-sidebar)  .widget-area,
+.two-up .widget-area {
+
+    float: left;        // I want a LHS sidebar
+    background: transparent;
+    
+    &::after, &::before {
+        display: none;
+    }
+    
+    @media screen and (min-width: 1020px) {
+        width: 216px;
+        margin-left: -36px;
+        margin-right: 0;
+    }
+    
+    .widget {
+        // padding-top: $content-area-padding;
+        // padding-bottom: $content-area-padding;
+        // border: 2px solid $gh-border-grey;
+        // border-radius: $container-border-radius;
+        .widget-title {
+            color: $gh-grey;
+            .csstransforms & {
+                transform: rotate(-3deg) translateX(-6px);
+            }
+        }
+        @media screen and (min-width: 1020px) {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    // Call to action widgets
+    .widget.widget_cta_widget {
+    
+        padding: $cta-widget-spacing;
+        border: 1px solid $color-clouds;
+        border-radius: $container-border-radius;
+        
+        margin-left: $mobile-side-padding;
+        margin-right: $mobile-side-padding;
+        @media screen and (min-width: 768px){
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+        p, h4, h5, h6 {
+            margin-bottom: $cta-widget-spacing;
+            color: $color-silver;
+            font-weight: normal;
+            text-align: center;
+        }
+        
+        .button, .button-minimal {
+            display: block;
+            padding: 8px 16px;
+            font-size: .86rem;
+            text-align: center;
+        }
+        .button {
+            @include button($gh-lightpink);
+        }
+        .button-minimal {
+            @include button-minimal($gh-lightpink);
+        }
+        
+        margin-bottom: $section-margin;
+        
+    }
+    
+    // List menus in general
+    .widget.widget_subpages,
+    .widget.widget_nav_menu {
+         ul {
+            @extend %list-menu;
+            
+            li {
+                padding: 0;
+                border-left: 3px solid $gh-blue;
+                &.widget_subpages_current_page {
+                    border-left: 6px solid $gh-pink;
+                }
+                a {
+                    padding-left: 16px;
+                    color: $color-silver;
+                    background: transparent;
+                    &:hover  {
+                        background: $gh-border-grey;
+                        &, a {
+                            color: $gh-grey;
+                        }
+                    }
+                    &[target=_blank]::after {
+                        content: " \f08e";
+                        display: inline-block;
+                        margin: 0 0.25em;
+                        font-family: FontAwesome;
+                        font-style: normal;
+                        font-weight: normal;
+                        text-decoration: inherit;
+                    }
+                }
+                &.widget_subpages_current_page a {
+                    color: $gh-grey;
+                }
+            }
+        }
+    }
+    
+    // Invert the default, to be content on right
+    .sidebar-right &,
+    .content-left & {
+        float: right;
+        @media screen and (min-width: 1020px) {
+            width: 216px;
+            margin-right: -36px;
+            margin-left: 0;
+        }
+    }
+    
+    
+}
+
+// Correct the content area sizing
+body:not(.full-width-layout):not(.no-sidebar) .content-area,
+.two-up .content-area {
+    float: right;
+    padding-left: $mobile-side-padding;
+    padding-right: $mobile-side-padding;
+    
+    @media screen and (min-width: 768px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    @media screen and (min-width: 1020px) {
+        width: 660px;
+    }
+    @media screen and (min-width: 1230px) {
+        width: 860px;
+    }
+    
+    // Invert the default, to be content on left
+    .sidebar-right &,
+    .content-left & {
+        float: left;
+    }
+}
+
+.entry-header .entry-title {
+    @media screen and (min-width: 1020px){
+        font-size: 3.6em;
+        color: $gh-lightgrey;
+        margin-left: -3px;
+        
+        .grid-area & {
+            font-size: 1.4em;
+        }        
+    }
+}
+
+// Hero
+.hero {
+    a.button-minimal {
+        &:hover, &:focus, &:active {
+            color: #1F1812;
+            text-shadow: none;
+        }
+    }
+}
+
+
+// Site content main wrapper thingo
+.site-content {
+    min-height: 40vh;
+    
+    .search-meta .breadcrumb {
+        display: inline;
+    }
+    
+    .breadcrumb-wrapper {
+        margin: -.5em 0 $section-margin;
+        .extra-spacing & {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.content-wrapper {
+    margin: $section-margin 0;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+
+// Content sections
+.content-area {
+    padding-top: $content-area-padding / 2;
+    padding-bottom: $content-area-padding / 2;
+    .extra-spacing & {
+        padding-top: $content-area-padding;
+        padding-bottom: $content-area-padding;        
+    }    
+    @media screen and (min-width: 1020px){
+        padding-top: $content-area-padding;
+        padding-bottom: $content-area-padding;
+        .extra-spacing & {
+            padding-top: $content-area-padding * 1.4;
+            padding-bottom: $content-area-padding * 1.4;        
+        }
+    }
+}
+
+.content-area-gray {
+    background: $color-clouds;
+}
+
+.breadcrumb {
+    font-size: .85em;
+}
+
+.entry-header {
+    
+}
+
+.entry-content {
+    img {
+        width: 100%;
+        margin-bottom: 1em;
+        @media screen and (min-width: 600px){
+            width: auto;
+            margin-bottom: auto;
+        }
+    }
+}
+
+
+
+// Grid page
+
+body[class*="grid-page"] .content-area {
+    background: transparent;
+}
+.grid-area {
+    background: #f7f7f7;
+}
+
+
+// Search page 
+.search {
+    .search-result {
+        margin: 1em 0;
+    }
+    .search-header {
+        margin: 0 0 0.5em;
+        
+        & > * {
+            margin: 0;
+        }
+        
+    }
+    .search-title {
+        color: $color-belize-hole;
+        font-size: 1.6em;
+        font-weight: normal;
+    }
+    .search-result-url {
+        font-size: .9em;
+        font-weight: normal;
+        color: $color-green-sea;
+    }
+}
+
+
+
+// Work in progress
+.wip-alert {
+    font-family: monospace;
+    background: whitesmoke;
+    color: #444;
+    font-size: 1em;
+    padding: 20px 30px;
+
+    border-left: 6px solid $gh-blue;
+    border-right: 6px solid $gh-pink;
+}
+
