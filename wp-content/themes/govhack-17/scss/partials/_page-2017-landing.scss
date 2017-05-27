@@ -154,6 +154,31 @@ body {
 
 }
 
+@media all and (max-width: 800px) and (min-width: 700px) {
+
+  #landingPage {
+  
+    header {
+      .column-2 {
+        float: left;
+        width: 20%;
+      }
+      .column-10 {
+	width: 80%;
+    	float: left;
+      }
+      .column-4 {
+	display: none;
+      }
+      .column-8 {
+        width: 100%;
+      }
+    }    
+
+  }
+
+}
+
 @media all and (max-width: 700px) {
   #landingPage {
 
