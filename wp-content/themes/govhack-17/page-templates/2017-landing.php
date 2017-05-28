@@ -311,8 +311,7 @@ get_header(); ?>
             </nav>
 
             <div class="site-info">
-                GovHack is run under the auspices of <a href="https://linux.org.au/" target="_blank">Linux Australia</a>.
-                Content on this site is licensed unser a <a
+                <em>GovHack</em> and the <em>GovHack Logo</em> are registered trademarks of GovHack Australia Limited.<br>Unless indicated otherwise, all other content on this site is licensed unser a <a
                         href="https://creativecommons.org/licenses/by-nc-nd/3.0/us/legalcode" target="_blank">CC
                     BY-NC-ND 3.0 US</a>.
                 <!-- Yes we are proud, sorry can't show it though.. <div>
