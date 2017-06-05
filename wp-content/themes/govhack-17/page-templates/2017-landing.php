@@ -245,10 +245,10 @@ get_header(); ?>
             <div class="row">
                 <div class="column-6">
                     <h2>GovHack 2017 is coming</h2>
-                    <p>GovHack events will be happening across Australia and New Zealand over the weekend of 28-30 July
-                        2017.Sign up to our newsletter to stay up-to-date with all things GovHack, in the lead up to the
-                        event.</p>
-                    <a class="pink button" href="https://govhack.formstack.com/forms/signup">Let's go</a>
+                    <p>Sign up to our newsletter to stay up-to-date with all things GovHack, in the lead up to the
+                        event. GovHack events will be happening across Australia and New Zealand over the weekend of 28-30 July
+                        2017.</p>
+                    <a class="pink button" href="https://govhack.formstack.com/forms/signup">Let's go!</a>
                 </div>
             </div>
         </div>
