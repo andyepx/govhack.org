@@ -248,7 +248,7 @@ get_header(); ?>
                     <p>Sign up to our newsletter to stay up-to-date with all things GovHack, in the lead up to the
                         event. GovHack events will be happening across Australia and New Zealand over the weekend of 28-30 July
                         2017.</p>
-                    <a class="pink button" href="https://govhack.formstack.com/forms/signup">Let's go!</a>
+                    <a class="pink button" href="https://govhack.formstack.com/forms/signup">Sign up!</a>
                 </div>
             </div>
         </div>
@@ -265,7 +265,7 @@ get_header(); ?>
                         state, territory and national level, there’s an option that’s perfect for your organisational
                         goals. Get
                         started today!</p>
-                    <a class="blue button" href="https://govhack.formstack.com/forms/launch_hidden?field52878198=Sponsor/Supporter">Let's go</a>
+                    <a class="blue button" href="https://govhack.formstack.com/forms/launch_hidden?field52878198=Sponsor/Supporter">Sponsor & Supporters Register!</a>
                 </div>
             </div>
         </div>
@@ -280,7 +280,7 @@ get_header(); ?>
                         you. Your journey starts with clicking the pink button. It’s like the red pill, but it’s pink.
                         And it’s
                         a button.</p>
-                    <a class="pink button" href="https://govhack.formstack.com/forms/launch_hidden?field52878198=Volunteer">Let's go</a>
+                    <a class="pink button" href="https://govhack.formstack.com/forms/launch_hidden?field52878198=Volunteer">Volunteers Register!</a>
                 </div>
             </div>
         </div>
