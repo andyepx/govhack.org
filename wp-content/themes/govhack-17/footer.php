@@ -28,18 +28,14 @@
                 ?>
             </nav><!-- #site-navigation -->
         <?php endif; ?>
-
-        <div class="site-info">
-            GovHack is run under the auspices of <a
-                    href="<?php echo esc_url(__('https://linux.org.au/', 'sequential')); ?>" target="_blank">Linux
-                Australia</a>.
-            Content on this site is licensed unser a <a
-                    href="<?php echo esc_url(__('https://creativecommons.org/licenses/by-nc-nd/3.0/us/legalcode', 'sequential')); ?>"
-                    target="_blank">CC BY-NC-ND 3.0 US</a>.
-            <!-- Yes we are proud, sorry can't show it though.. <div>
-                <a href="<?php echo esc_url(__('http://wordpress.org/', 'sequential')); ?>"><?php printf(esc_html__('Proudly powered by %s', 'sequential'), 'WordPress'); ?></a>
-            </div>-->
-        </div><!-- .site-info -->
+	<div class="site-info">
+                <em>GovHack</em> and the <em>GovHack Logo</em> are registered trademarks of GovHack Australia Limited.<br>Unless indicated otherwise, all other content on this site is licensed under a <a
+                        href="https://creativecommons.org/licenses/by-nc-nd/3.0/us/legalcode" target="_blank">CC
+                    BY-NC-ND 3.0 US</a>.
+                <!-- Yes we are proud, sorry can't show it though.. <div>
+                    <a href="http://wordpress.org/">Proudly powered by WordPress</a>
+                </div>-->
+            </div>
     </footer><!-- #colophon -->
 
 <?php endif; ?>
