@@ -253,6 +253,18 @@ get_header(); ?>
             </div>
         </div>
     </div>
+    <div class="landing-content landing5" id="connections">
+        <div class="row">
+            <div class="column-6">
+                <h2>Get connected</h2>
+                <p>Want to find out what GovHack is all about? Eager to find a winning edge? GovHack Connections Events
+                    are a great place to start. Local GovHack teams will give you an overview of the competition and
+                    answer all your burning questions. Learn more about official events in your region and all about
+                    youth, maker or special interest themed nodes.</p>
+                <a class="blue button" href="https://govhack.formstack.com/forms/connections">FIND AN EVENT</a>
+            </div>
+        </div>
+    </div>
     <div class="landing-content landing2" id="sponsor">
         <div class="row">
             <div class="column-6"></div>
@@ -266,26 +278,25 @@ get_header(); ?>
                     state, territory and national level, there’s an option that’s perfect for your organisational
                     goals. Get
                     started today!</p>
-                <a class="blue button"
+                <a class="pink button"
                    href="https://govhack.formstack.com/forms/launch_hidden?field52878198=Sponsor/Supporter">Sponsor &
                     Supporters Register!</a>
             </div>
         </div>
     </div>
-    <div class="landing-content landing4" id="sponsor">
-        <div class="row">
-            <div class="column-6">
-
-                <h2>Mentor or Coach</h2>
-                <p>If you are an expert in accessing
-                    or interpreting datasets, designing data models, developing and
-                    presenting ideas that use data to solve problems – you should get in touch with us!</p>
-                <a class="button pink" href="https://govhack.formstack.com/forms/mentors">
-                    Become a Mentor or Coach!
-                </a>
-            </div>
-        </div>
-    </div>
+<!--    <div class="landing-content landing4" id="mentor">-->
+<!--        <div class="row">-->
+<!--            <div class="column-6">-->
+<!--                <h2>Mentor or Coach</h2>-->
+<!--                <p>If you are an expert in accessing-->
+<!--                    or interpreting datasets, designing data models, developing and-->
+<!--                    presenting ideas that use data to solve problems – you should get in touch with us!</p>-->
+<!--                <a class="button pink" href="https://govhack.formstack.com/forms/mentors">-->
+<!--                    Become a Mentor or Coach!-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
     <div class="landing-content landing3" id="volunteer">
         <div class="row">
             <div class="column-6"></div>

@@ -153,6 +153,10 @@ body {
       background: url(/wp-content/themes/govhack-17/img/2017/landing_4.jpg);
       background-size: cover;
     }
+    &.landing5 {
+      background: url(/wp-content/themes/govhack-17/img/2017/landing_5.jpg);
+      background-size: cover;
+    }
 
   }
 
@@ -221,8 +225,12 @@ body {
         background: url(/wp-content/themes/govhack-17/img/2017/landing_3-mobile.jpg);
         background-size: cover;
       }
-      &.landing3 {
+      &.landing4 {
         background: url(/wp-content/themes/govhack-17/img/2017/landing_4-mobile.jpg);
+        background-size: cover;
+      }
+      &.landing5 {
+        background: url(/wp-content/themes/govhack-17/img/2017/landing_5-mobile.jpg);
         background-size: cover;
       }
     }
