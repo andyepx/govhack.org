@@ -234,8 +234,8 @@ get_header(); ?>
                     </h1>
                 </div>
                 <div class="column-4">
-                    <a class="blue button" id="goToSponsor" href="#">Sponsor</a>
-                    <a class="pink button" id="goToVolunteer" href="#">Volunteer</a>
+                    <a class="pink button" id="goToSponsor" href="#">Sponsor</a>
+                    <a class="blue button" id="goToVolunteer" href="#">Volunteer</a>
                 </div>
             </div>
         </div>
@@ -249,7 +249,7 @@ get_header(); ?>
                     event. GovHack events will be happening across Australia and New Zealand over the weekend of 28-30
                     July
                     2017.</p>
-                <a class="pink button" href="https://govhack.formstack.com/forms/signup">Sign up!</a>
+                <a class="blue button" href="https://govhack.formstack.com/forms/signup">Sign up!</a>
             </div>
         </div>
     </div>
@@ -261,7 +261,7 @@ get_header(); ?>
                     are a great place to start. Local GovHack teams will give you an overview of the competition and
                     answer all your burning questions. Learn more about official events in your region and all about
                     youth, maker or special interest themed nodes.</p>
-                <a class="blue button" href="https://govhack.formstack.com/forms/connections">FIND AN EVENT</a>
+                <a class="pink button" href="https://govhack.formstack.com/forms/connections">FIND AN EVENT</a>
             </div>
         </div>
     </div>
@@ -278,7 +278,7 @@ get_header(); ?>
                     state, territory and national level, there’s an option that’s perfect for your organisational
                     goals. Get
                     started today!</p>
-                <a class="pink button"
+                <a class="blue button"
                    href="https://govhack.formstack.com/forms/launch_hidden?field52878198=Sponsor/Supporter">Sponsor &
                     Supporters Register!</a>
             </div>
@@ -309,7 +309,7 @@ get_header(); ?>
                     you. Your journey starts with clicking the pink button. It’s like the red pill, but it’s pink.
                     And it’s
                     a button.</p>
-                <a class="blue button" href="https://govhack.formstack.com/forms/launch_hidden?field52878198=Volunteer">Volunteers
+                <a class="pink button" href="https://govhack.formstack.com/forms/launch_hidden?field52878198=Volunteer">Volunteers
                     Register!</a>
             </div>
         </div>
