@@ -317,7 +317,7 @@ get_header(); ?>
 
     <footer id="colophon" class="site-footer" style="background: none; padding-top: 0;" role="contentinfo">
 
-        <svg style="height: 80px; margin: 12px; max-width: 100%;" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+        <svg style="height: 80px; margin: 12px; max-width: calc(100% - 24px);" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
              xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 550 53">
             <defs>
                 <style>.cls-1 {
