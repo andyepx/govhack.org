@@ -30,7 +30,7 @@
             document.querySelector('#sponsor').scrollIntoView({ behavior: 'smooth' });
         });
         $('#goToVolunteer').click(function(x) {
-            document.querySelector('#volunteer').scrollIntoView({ behavior: 'smooth' });
+            document.querySelector('#mentor').scrollIntoView({ behavior: 'smooth' });
         });
         $('#goToTop').click(function(x) {
             window.scroll({ top: 0, behavior: 'smooth' });
