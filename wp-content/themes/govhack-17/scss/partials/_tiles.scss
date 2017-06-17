@@ -83,29 +83,25 @@
       background-color: $gh-blue;
       border-color: lighten($gh-blue, 10%);
     }
-    &.blue_20 {
-      background-color: lighten($gh-blue, 20%);
-      border-color: lighten($gh-blue, 30%);
-    }
-    &.blue_40 {
-      background-color: lighten($gh-blue, 40%);
-      border-color: lighten($gh-blue, 50%);
-    }
-    &.blue_60 {
-      background-color: lighten($gh-blue, 60%);
-      border-color: lighten($gh-blue, 70%);
-    }
-    &.blue_80 {
-      background-color: lighten($gh-blue, 80%);
-      border-color: lighten($gh-blue, 90%);
+    &.blue_light {
+      background-color: lighten($gh-blue, 10%);
+      border-color: lighten($gh-blue, 20%);
     }
     &.pink {
       background-color: $gh-pink;
       border-color: lighten($gh-pink, 10%);
     }
+    &.pink_light {
+      background-color: lighten($gh-pink;, 10%)
+      border-color: lighten($gh-pink, 20%);
+    }
     &.grey {
       background-color: $gh-grey;
       border-color: lighten($gh-grey, 10%);
+    }
+    &.grey_light {
+      background-color: lighten($gh-grey, 10%);
+      border-color: lighten($gh-grey, 20%);
     }
     &.lightgrey {
       background-color: $gh-lightgrey;

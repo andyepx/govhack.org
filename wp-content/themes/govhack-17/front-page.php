@@ -159,17 +159,17 @@ get_header(); ?>
                         <?php endif; // gh_social_slack ?>
                     </div>
                     <h4 id="gh-homepage-slider-nav" class="gh-slider-nav">
-                        <span role="button">Information</span>
                         <span role="button">Regions</span>
-                        <?php if ( $banner_date_heading = get_theme_mod('gh_tile_show_registration_links' , false) ): ?> 
+                        <span role="button">Information</span>
+                        <?php if ( $banner_date_heading = get_theme_mod('gh_tile_show_registration_links' , false) ): ?>
                         <span role="button">Tickets</span>
                         <?php endif; ?>
                     </h4>
                 </div>
                 <div id="gh-homepage-slider" class="gh-slider" style="display: none;">
-                    <div><?php get_template_part( 'home', 'tiles-grid' ); ?></div>
                     <div><?php get_template_part( 'region', 'tiles' ); ?></div>
-                    <?php if ( $banner_date_heading = get_theme_mod('gh_tile_show_registration_links' , false) ): ?> 
+                    <div><?php get_template_part( 'home', 'tiles-grid' ); ?></div>
+                    <?php if ( $banner_date_heading = get_theme_mod('gh_tile_show_registration_links' , false) ): ?>
                     <div><?php get_template_part('home', 'registrationlinks'); ?></div>
                     <?php endif; ?>
                 </div>
