@@ -255,7 +255,6 @@ get_header(); ?>
     </div>
     <div class="landing-content landing5" id="connections">
         <div class="row">
-            <div class="column-6"></div>
             <div class="column-6">
                 <h2>Get connected</h2>
                 <p>Want to find out what GovHack is all about? Eager to find a winning edge? GovHack Connections Events
