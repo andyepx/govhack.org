@@ -42,8 +42,8 @@ function register_location_post_type(){
             'not_found_in_trash' => __( 'No locations found in trash' ),
             'parent_item' => __( 'Parent Location' ),
         ),
-        'public' => false,
-        'publicly_queryable' => false,
+        'public' => true,
+        'publicly_queryable' => true,
         'show_ui' => true,
         'has_archive' => false,
         'menu_position' => 4,
@@ -52,7 +52,8 @@ function register_location_post_type(){
         'hierarchical' => true,
         'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
         'rewrite' => array(
-            'slug' => 'locations'
+            'slug' => 'locations',
+            'with_front' => false
         ),
         'taxonomies' => array(
             'location_type'

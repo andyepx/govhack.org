@@ -48,7 +48,6 @@ get_header(); ?>
 
     <main id="main" class="site-main two-up" role="main">
 
-        <?php get_template_part('region', 'location_buttons'); ?>
 
         <div class="wrapper">
             <div id="primary" class="content-area">
@@ -56,7 +55,6 @@ get_header(); ?>
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                     <div class="entry-content">
                         <?php the_content() ?>
-                        <?php get_template_part('region', 'locations'); ?>
                     </div>
                 </article><!-- .hentry -->
 
@@ -64,7 +62,9 @@ get_header(); ?>
 
             </div><!-- #primary -->
 
-            <?php get_sidebar('region'); ?>
+        <?php get_template_part('region', 'location_side'); ?>
+
+            <!--            --><?php //get_sidebar('region'); ?>
 
         </div><!-- .wrapper -->
     </main><!-- #main -->

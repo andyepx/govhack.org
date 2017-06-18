@@ -287,9 +287,14 @@ function gh_render_locations_list($region_page_id = 0, $type = null)
 
     if ($type == 'buttons') {
 
-
         foreach ($locations as $x => &$loc) {
             echo "<a class='button gh-blue' href='/location/#'>$loc->post_title</a>";
+        }
+
+    } else if ($type == 'sidebar') {
+
+        foreach ($locations as $x => &$loc) {
+            echo '<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/locations/' . $loc->post_name . '">' . $loc->post_title . '</a></li>';
         }
 
     } else {
