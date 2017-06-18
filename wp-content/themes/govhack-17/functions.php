@@ -194,6 +194,7 @@ function content_additional_classes()
 /**
  * Post Type wizardry
  */
+include __DIR__ . '/inc/post-types/mentor-taxonomy.php';
 include __DIR__ . '/inc/post-types/sponsor-post-type.php';
 include __DIR__ . '/inc/post-types/location-post-type.php';
 include __DIR__ . '/inc/post-types/tile-post-type.php';
