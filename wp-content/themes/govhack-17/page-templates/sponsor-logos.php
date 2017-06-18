@@ -22,7 +22,7 @@ get_header(); ?>
 
         <div class="gh-sponsors centered">
             <div class="wrapper">
-                <h2 class="gh-sponsors-header">GovHack 2016 National Sponsors</h2>
+                <h2 class="gh-sponsors-header">GovHack 2017 National Sponsors</h2>
                 <?php get_template_part('home', 'sponsors'); ?>    
             </div>
         </div>

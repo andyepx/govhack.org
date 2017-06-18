@@ -64,7 +64,7 @@ get_header(); ?>
         <aside>
             <section class="content-area gh-sponsors">
                 <div class="wrapper">
-                    <h2 class="gh-sponsors-header">GovHack 2016 National Sponsors</h2>
+                    <h2 class="gh-sponsors-header">GovHack 2017 National Sponsors</h2>
                     <?php get_template_part('home', 'sponsors'); ?>                
                 </div>
             </section><!-- .content-area -->
