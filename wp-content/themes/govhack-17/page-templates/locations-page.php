@@ -45,7 +45,7 @@ get_header(); ?>
                 <!-- <a class="button-minimal location-official" role="button"><span id="toggle-official-locations" class="fa fa-check-square" aria-hidden="true" ></span> Official</a>
                 <a class="button-minimal location-node" role="button"><span id="toggle-node-locations" class="fa fa-check-square" aria-hidden="true"></span> Node</a>
                 | -->
-                <div class="location-area-button-wrapper"></span>
+                <div class="location-area-button-wrapper"></div>
             </nav>
         </div>    
     </section>
