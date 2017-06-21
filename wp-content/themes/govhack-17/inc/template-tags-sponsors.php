@@ -82,6 +82,7 @@ function gh_render_sponsors($tax_type, $sponsorship_types, $region_page_id = 0)
         return count(get_posts($sponsors_query_args)) > 0;
     });
 
+
     $sponsorship_types = array_values($sponsorship_types);
 
     // Lookahead optimisation
