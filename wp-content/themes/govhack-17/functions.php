@@ -76,7 +76,8 @@ function gh_scripts()
 
     // Our magic asset-ified site switcher
     // wp_enqueue_script( 'gh-site-switcher', 'http://assets-dev.govhack.org/js/site-switcher.min.js', [] );
-    wp_enqueue_script('gh-site-switcher', 'https://assets.govhack.org/js/site-switcher.min.js', []);
+//    wp_enqueue_script('gh-site-switcher', 'https://assets.govhack.org/js/site-switcher.min.js', []);
+    wp_enqueue_script('gh-site-switcher', '/wp-content/themes/govhack-17/js/siteswitcher.js', []);
 
     // custom fonts
     // wp_enqueue_style( 'gh-fonts', gh_fonts_url(), array(), null );

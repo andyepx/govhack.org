@@ -37,6 +37,7 @@ get_header(); ?>
 
     <main id="main" class="site-main two-up" role="main">
 
+        <?php get_template_part('region', 'location_side'); ?>
 
         <div class="wrapper">
             <div id="primary" class="content-area">
@@ -50,8 +51,6 @@ get_header(); ?>
                 <?php edit_post_link(esc_html__('Edit', 'sequential'), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>'); ?>
 
             </div><!-- #primary -->
-
-        <?php get_template_part('region', 'location_side'); ?>
 
             <!--            --><?php //get_sidebar('region'); ?>
 
