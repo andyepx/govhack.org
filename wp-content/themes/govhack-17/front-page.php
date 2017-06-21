@@ -147,10 +147,10 @@ get_header(); ?>
             <div class="gh-sponsors wrapper">
                 <h2 class="gh-sponsors-header">
                     GovHack 2017 National Sponsors
-                    <?php if (isset($sponsor_logos_page_link)): ?>
-                        <small class="inline-muted-link"> <a href="<?php echo $sponsor_logos_page_link ?>">See all
-                                national and state sponsors &raquo;</a></small>
-                    <?php endif; ?>
+<!--                    --><?php //if (isset($sponsor_logos_page_link)): ?>
+<!--                        <small class="inline-muted-link"> <a href="--><?php //echo $sponsor_logos_page_link ?><!--">See all-->
+<!--                                national and state sponsors &raquo;</a></small>-->
+<!--                    --><?php //endif; ?>
                 </h2>
                 <?php get_template_part('home', 'sponsors'); ?>
             </div>

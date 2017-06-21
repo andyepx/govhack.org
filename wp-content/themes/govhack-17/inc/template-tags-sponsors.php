@@ -257,6 +257,9 @@ function gh_render_locations_list($region_page_id = 0, $type = null)
         case 'QUEENSLAND':
             $region = 'qld';
             break;
+        case 'ACT':
+            $region = 'act';
+            break;
         case 'NEW SOUTH WALES':
             $region = 'nsw';
             break;
@@ -294,7 +297,7 @@ function gh_render_locations_list($region_page_id = 0, $type = null)
     } else if ($type == 'sidebar') {
 
         foreach ($locations as $x => &$loc) {
-            echo '<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/locations/' . $loc->post_name . '">' . $loc->post_title . '</a></li>';
+            echo '<li class="menu-item-region-location"><a href="/locations/' . $loc->post_name . '">' . $loc->post_title . '</a></li>';
         }
 
     } else {

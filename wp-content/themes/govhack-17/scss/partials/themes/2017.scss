@@ -5,5 +5,17 @@
     min-width: 85px;
     margin: 5px 5px 5px 0;
     padding: 10px;
+
+    &.black {
+      background: #232323;
+      &:hover {
+        background: #111;
+      }
+    }
   }
+}
+
+.menu-item-region-location {
+  list-style: none;
+  margin: 0 0 10px;
 }

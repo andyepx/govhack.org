@@ -163,9 +163,11 @@ add_filter('script_loader_tag', 'script_tag_defer', 10, 2);
 function show_header()
 {
     $custom_fields = get_post_custom();
-    foreach ($custom_fields as $k => $v) {
-        if ('show_header' == $k)
-            return ($v[0] == 'true');
+    if ($custom_fields) {
+        foreach ($custom_fields as $k => $v) {
+            if ('show_header' == $k)
+                return ($v[0] == 'true');
+        }
     }
     return true;
 }
@@ -173,9 +175,11 @@ function show_header()
 function show_footer()
 {
     $custom_fields = get_post_custom();
-    foreach ($custom_fields as $k => $v) {
-        if ('show_footer' == $k)
-            return ($v[0] == 'true');
+    if ($custom_fields) {
+        foreach ($custom_fields as $k => $v) {
+            if ('show_footer' == $k)
+                return ($v[0] == 'true');
+        }
     }
     return true;
 }

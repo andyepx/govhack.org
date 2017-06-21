@@ -35,17 +35,6 @@ get_header(); ?>
     </div><!-- .wrapper -->
     </div><!-- .hero -->
 
-    <?php if (gh_has_regional_sponsors()): ?>
-        <div class="hero region-sponsors-hero">
-            <div class="wrapper">
-                <section class="region-sponsors gh-sponsors">
-                    <h2 class="gh-sponsors-header">2017 State Sponsors</h2>
-                    <?php get_template_part('region', 'sponsors'); ?>
-                </section>
-            </div><!-- .wrapper -->
-        </div><!-- .hero -->
-    <?php endif; // gh_has_regional_sponsors ?>
-
     <main id="main" class="site-main two-up" role="main">
 
 
@@ -68,6 +57,17 @@ get_header(); ?>
 
         </div><!-- .wrapper -->
     </main><!-- #main -->
+
+    <?php if (gh_has_regional_sponsors()): ?>
+        <div class="hero region-sponsors-hero">
+            <div class="wrapper">
+                <section class="region-sponsors gh-sponsors">
+                    <h2 class="gh-sponsors-header">2017 State Sponsors</h2>
+                    <?php get_template_part('region', 'sponsors'); ?>
+                </section>
+            </div><!-- .wrapper -->
+        </div><!-- .hero -->
+    <?php endif; // gh_has_regional_sponsors ?>
 
 <?php endwhile; // end of the loop. ?>
 <?php get_footer(); ?>
