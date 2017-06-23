@@ -37,9 +37,9 @@ get_header(); ?>
 
     <main id="main" class="site-main two-up" role="main">
 
-        <?php get_template_part('region', 'location_side'); ?>
 
         <div class="wrapper">
+            <?php get_template_part('region', 'location_side'); ?>
             <div id="primary" class="content-area">
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

@@ -31,7 +31,7 @@ function gh_location_meta_box($object)
                 New South Wales
             </option>
             <option value="nt" <?php echo esc_attr(get_post_meta($object->ID, 'region', true)) == 'nt' ? 'selected' : ''; ?>>
-                Northern Territories
+                Northern Territory
             </option>
             <option value="nz" <?php echo esc_attr(get_post_meta($object->ID, 'region', true)) == 'nz' ? 'selected' : ''; ?>>
                 New Zealand

@@ -33,6 +33,40 @@
 @media all and (max-width: 800px) {
   .widget-area {
     padding: 15px 15px 0 15px;
+    & + .content-area {
+      width: 100% !important;
+    }
+  }
+  body.no-sidebar {
+    .widget-area {
+      & + .content-area {
+        width: 100% !important;
+      }
+    }
+  }
+}
+@media all and (min-width: 800px) {
+  body.no-sidebar {
+    .widget-area {
+      display: block !important;
+      & + .content-area {
+        width: 660px !important;
+      }
+    }
+    .content-area {
+      width: 100% !important;
+    }
+  }
+}
+
+@media all and (min-width: 1230px) {
+  body.no-sidebar {
+    .widget-area {
+      display: block !important;
+      & + .content-area {
+        width: 860px !important;
+      }
+    }
   }
 }
 
@@ -40,5 +74,6 @@
   .widget-area {
     padding: 32px 15px 0 15px;
     margin-left: 0 !important;
+
   }
 }

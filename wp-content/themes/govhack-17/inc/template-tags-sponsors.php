@@ -273,7 +273,7 @@ function gh_render_locations_list($region_page_id = 0, $type = null)
         case 'WESTERN AUSTRALIA':
             $region = 'wa';
             break;
-        case 'NORTHERN TERRITORIES':
+        case 'NORTHERN TERRITORY':
             $region = 'nt';
             break;
         case 'NEW ZEALAND':
