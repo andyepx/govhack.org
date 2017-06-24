@@ -74,12 +74,14 @@ get_header(); ?>
 
                 <?php $custom_fields = get_post_custom(); ?>
 
-                <h3>Contact</h3>
-                <p>
-                    <?php echo array_key_exists('email', $custom_fields) ? $custom_fields['email'][0] : "" ?>
-                    <br>
-                    <?php echo array_key_exists('twitter', $custom_fields) ? $custom_fields['twitter'][0] : "" ?>
-                </p>
+                <?php if ((array_key_exists('email', $custom_fields) && strlen($custom_fields['email'][0]) > 0) || (array_key_exists('twitter', $custom_fields) && strlen($custom_fields['twitter'][0]) > 0)) { ?>
+                    <h3>Contact</h3>
+                    <p>
+                        <?php echo (array_key_exists('email', $custom_fields) && strlen($custom_fields['email'][0]) > 0) ? $custom_fields['email'][0] : "" ?>
+                        <br>
+                        <?php echo (array_key_exists('twitter', $custom_fields) && strlen($custom_fields['twitter'][0]) > 0) ? $custom_fields['twitter'][0] : "" ?>
+                    </p>
+                <?php } ?>
 
                 <h3>Venue</h3>
                 <p>
@@ -90,76 +92,79 @@ get_header(); ?>
                 </script>
                 </p>
 
-                <?php if (array_key_exists('venue_name', $custom_fields) && array_key_exists('venue_address', $custom_fields)) { ?>
+                <?php
+                $showName = (array_key_exists('venue_name', $custom_fields) && strlen($custom_fields['venue_name'][0]) > 0);
+                $showAddress = (array_key_exists('venue_address', $custom_fields) && strlen($custom_fields['venue_address'][0]) > 0);
+                if ($showName || $showAddress) { ?>
                     <p>
                         <b>Name & Address: </b>
                         <br>
-                        <?php echo $custom_fields['venue_name'][0] ?>
+                        <?php echo $showName ? nl2br($custom_fields['venue_name'][0]) : "" ?>
                         <br>
-                        <em><?php echo $custom_fields['venue_address'][0] ?></em>
+                        <em><?php echo $showAddress ? nl2br($custom_fields['venue_address'][0]) : "" ?></em>
                     </p>
                 <?php } ?>
-                <?php if (array_key_exists('venue_host', $custom_fields)) { ?>
+                <?php if (array_key_exists('venue_host', $custom_fields) && strlen($custom_fields['venue_host'][0]) > 0) { ?>
                     <p>
                         <b>Host: </b>
                         <br>
-                        <?php echo $custom_fields['venue_host'][0] ?>
+                        <?php echo nl2br($custom_fields['venue_host'][0]) ?>
                     </p>
                 <?php } ?>
-                <?php if (array_key_exists('venue_team', $custom_fields)) { ?>
+                <?php if (array_key_exists('venue_team', $custom_fields) && strlen($custom_fields['venue_team'][0]) > 0) { ?>
                     <p>
                         <b>Team: </b>
                         <br>
-                        <?php echo $custom_fields['venue_team'][0] ?>
+                        <?php echo nl2br($custom_fields['venue_team'][0]) ?>
                     </p>
                 <?php } ?>
-                <?php if (array_key_exists('venue_accessibility', $custom_fields)) { ?>
+                <?php if (array_key_exists('venue_accessibility', $custom_fields) && strlen($custom_fields['venue_accessibility'][0]) > 0) { ?>
                     <p>
                         <b>Accessibility: </b>
                         <br>
-                        <?php echo $custom_fields['venue_accessibility'][0] ?>
+                        <?php echo nl2br($custom_fields['venue_accessibility'][0]) ?>
                     </p>
                 <?php } ?>
-                <?php if (array_key_exists('venue_under_18', $custom_fields)) { ?>
+                <?php if (array_key_exists('venue_under_18', $custom_fields) && strlen($custom_fields['venue_under_18'][0]) > 0) { ?>
                     <p>
                         <b>Under 18: </b>
                         <br>
-                        <?php echo $custom_fields['venue_under_18'][0] ?>
+                        <?php echo nl2br($custom_fields['venue_under_18'][0]) ?>
                     </p>
                 <?php } ?>
-                <?php if (array_key_exists('venue_capacity', $custom_fields)) { ?>
+                <?php if (array_key_exists('venue_capacity', $custom_fields) && strlen($custom_fields['venue_capacity'][0]) > 0) { ?>
                     <p>
                         <b>Capacity: </b>
                         <br>
-                        <?php echo $custom_fields['venue_capacity'][0] ?>
+                        <?php echo nl2br($custom_fields['venue_capacity'][0]) ?>
                     </p>
                 <?php } ?>
-                <?php if (array_key_exists('venue_parking', $custom_fields)) { ?>
+                <?php if (array_key_exists('venue_parking', $custom_fields) && strlen($custom_fields['venue_parking'][0]) > 0) { ?>
                     <p>
                         <b>Parking: </b>
                         <br>
-                        <?php echo $custom_fields['venue_parking'][0] ?>
+                        <?php echo nl2br($custom_fields['venue_parking'][0]) ?>
                     </p>
                 <?php } ?>
-                <?php if (array_key_exists('venue_public_transport', $custom_fields)) { ?>
+                <?php if (array_key_exists('venue_public_transport', $custom_fields) && strlen($custom_fields['venue_public_transport'][0]) > 0) { ?>
                     <p>
                         <b>Public transport: </b>
                         <br>
-                        <?php echo $custom_fields['venue_public_transport'][0] ?>
+                        <?php echo nl2br($custom_fields['venue_public_transport'][0]) ?>
                     </p>
                 <?php } ?>
-                <?php if (array_key_exists('venue_public_transport_last', $custom_fields)) { ?>
+                <?php if (array_key_exists('venue_public_transport_last', $custom_fields) && strlen($custom_fields['venue_public_transport_last'][0]) > 0) { ?>
                     <p>
                         <b>Public transport last: </b>
                         <br>
-                        <?php echo $custom_fields['venue_public_transport_last'][0] ?>
+                        <?php echo nl2br($custom_fields['venue_public_transport_last'][0]) ?>
                     </p>
                 <?php } ?>
-                <?php if (array_key_exists('times', $custom_fields)) { ?>
+                <?php if (array_key_exists('times', $custom_fields) && strlen($custom_fields['times'][0]) > 0) { ?>
                     <p>
                         <b>Opening times: </b>
                         <br>
-                        <?php echo $custom_fields['times'][0] ?>
+                        <?php echo nl2br($custom_fields['times'][0]) ?>
                     </p>
                 <?php } ?>
 
