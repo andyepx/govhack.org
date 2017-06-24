@@ -79,7 +79,8 @@ get_header(); ?>
                     <p>
                         <?php echo (array_key_exists('email', $custom_fields) && strlen($custom_fields['email'][0]) > 0) ? $custom_fields['email'][0] : "" ?>
                         <br>
-                        <?php echo (array_key_exists('twitter', $custom_fields) && strlen($custom_fields['twitter'][0]) > 0) ? $custom_fields['twitter'][0] : "" ?>
+                        <?php echo (array_key_exists('twitter', $custom_fields) && strlen($custom_fields['twitter'][0]) > 0) ?
+                            "<a href='//twitter.com/'" . $custom_fields['twitter'][0] . ">" . $custom_fields['twitter'][0] . "</a>" : "" ?>
                     </p>
                 <?php } ?>
 
