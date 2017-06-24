@@ -76,7 +76,8 @@ function gh_scripts()
 
     // Our magic asset-ified site switcher
     // wp_enqueue_script( 'gh-site-switcher', 'http://assets-dev.govhack.org/js/site-switcher.min.js', [] );
-    wp_enqueue_script('gh-site-switcher', 'https://assets.govhack.org/js/site-switcher.min.js', []);
+//    wp_enqueue_script('gh-site-switcher', 'https://assets.govhack.org/js/site-switcher.min.js', []);
+    wp_enqueue_script('gh-site-switcher', '/wp-content/themes/govhack-17/js/siteswitcher.js', []);
 
     // custom fonts
     // wp_enqueue_style( 'gh-fonts', gh_fonts_url(), array(), null );
@@ -163,9 +164,11 @@ add_filter('script_loader_tag', 'script_tag_defer', 10, 2);
 function show_header()
 {
     $custom_fields = get_post_custom();
-    foreach ($custom_fields as $k => $v) {
-        if ('show_header' == $k)
-            return ($v[0] == 'true');
+    if ($custom_fields) {
+        foreach ($custom_fields as $k => $v) {
+            if ('show_header' == $k)
+                return ($v[0] == 'true');
+        }
     }
     return true;
 }
@@ -173,9 +176,11 @@ function show_header()
 function show_footer()
 {
     $custom_fields = get_post_custom();
-    foreach ($custom_fields as $k => $v) {
-        if ('show_footer' == $k)
-            return ($v[0] == 'true');
+    if ($custom_fields) {
+        foreach ($custom_fields as $k => $v) {
+            if ('show_footer' == $k)
+                return ($v[0] == 'true');
+        }
     }
     return true;
 }
@@ -194,6 +199,7 @@ function content_additional_classes()
 /**
  * Post Type wizardry
  */
+include __DIR__ . '/inc/post-types/mentor-taxonomy.php';
 include __DIR__ . '/inc/post-types/sponsor-post-type.php';
 include __DIR__ . '/inc/post-types/location-post-type.php';
 include __DIR__ . '/inc/post-types/tile-post-type.php';

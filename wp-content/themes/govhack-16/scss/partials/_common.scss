@@ -13,7 +13,7 @@
     background-image: url('https://s3-ap-southeast-2.amazonaws.com/assets.govhack.org/img/www-backgrounds/redcarpet-stevecollis.jpg');
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: cover;
+    background-size: cover !important;
     
     // Override header image for certain pages
     .home &,

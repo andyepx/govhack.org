@@ -14,7 +14,6 @@ get_header(); ?>
             <?php // gh_breadcrumb(); ?>
             
 			<?php while ( have_posts() ) : the_post(); ?>
-
 				<?php
 					if ( 'sponsors' === get_post_type() ) {
 						get_template_part( 'content', 'sponsors' );

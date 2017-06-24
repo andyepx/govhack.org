@@ -45,12 +45,7 @@
                 <a class="gh-headerdevice gh-headerdevice-1 blue pink dual-color"
                    href="<?php echo esc_url(home_url('/')); ?>" rel="home">
                     <div class="gh-site-branding">
-                        <?php sequential_the_site_logo(); ?>
-                        <?php if (get_header_image()) : ?>
-                            <div class="site-title">
-                                <img src="<?php header_image(); ?>" alt="<?php bloginfo('name'); ?>">
-                            </div>
-                        <?php elseif (file_exists(get_stylesheet_directory() . '/img/logo.png')): ?>
+                        <?php if (file_exists(get_stylesheet_directory() . '/img/logo.png')): ?>
                             <div class="site-title">
                                 <img src="<?= get_stylesheet_directory_uri() . '/img/logo.png' ?>"
                                      alt="<?php bloginfo('name'); ?>">

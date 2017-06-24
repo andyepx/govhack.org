@@ -35,6 +35,28 @@ get_header(); ?>
     </div><!-- .wrapper -->
     </div><!-- .hero -->
 
+    <main id="main" class="site-main two-up" role="main">
+
+
+        <div class="wrapper">
+            <?php get_template_part('region', 'location_side'); ?>
+            <div id="primary" class="content-area">
+
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                    <div class="entry-content">
+                        <?php the_content() ?>
+                    </div>
+                </article><!-- .hentry -->
+
+                <?php edit_post_link(esc_html__('Edit', 'sequential'), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>'); ?>
+
+            </div><!-- #primary -->
+
+            <!--            --><?php //get_sidebar('region'); ?>
+
+        </div><!-- .wrapper -->
+    </main><!-- #main -->
+
     <?php if (gh_has_regional_sponsors()): ?>
         <div class="hero region-sponsors-hero">
             <div class="wrapper">
@@ -45,29 +67,6 @@ get_header(); ?>
             </div><!-- .wrapper -->
         </div><!-- .hero -->
     <?php endif; // gh_has_regional_sponsors ?>
-
-    <main id="main" class="site-main two-up" role="main">
-
-        <?php get_template_part('region', 'location_buttons'); ?>
-
-        <div class="wrapper">
-            <div id="primary" class="content-area">
-
-                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                    <div class="entry-content">
-                        <?php the_content() ?>
-                        <?php get_template_part('region', 'locations'); ?>
-                    </div>
-                </article><!-- .hentry -->
-
-                <?php edit_post_link(esc_html__('Edit', 'sequential'), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>'); ?>
-
-            </div><!-- #primary -->
-
-            <?php get_sidebar('region'); ?>
-
-        </div><!-- .wrapper -->
-    </main><!-- #main -->
 
 <?php endwhile; // end of the loop. ?>
 <?php get_footer(); ?>

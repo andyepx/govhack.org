@@ -82,6 +82,7 @@ function gh_render_sponsors($tax_type, $sponsorship_types, $region_page_id = 0)
         return count(get_posts($sponsors_query_args)) > 0;
     });
 
+
     $sponsorship_types = array_values($sponsorship_types);
 
     // Lookahead optimisation
@@ -257,6 +258,9 @@ function gh_render_locations_list($region_page_id = 0, $type = null)
         case 'QUEENSLAND':
             $region = 'qld';
             break;
+        case 'ACT':
+            $region = 'act';
+            break;
         case 'NEW SOUTH WALES':
             $region = 'nsw';
             break;
@@ -269,7 +273,7 @@ function gh_render_locations_list($region_page_id = 0, $type = null)
         case 'WESTERN AUSTRALIA':
             $region = 'wa';
             break;
-        case 'NORTHERN TERRITORIES':
+        case 'NORTHERN TERRITORY':
             $region = 'nt';
             break;
         case 'NEW ZEALAND':
@@ -287,9 +291,14 @@ function gh_render_locations_list($region_page_id = 0, $type = null)
 
     if ($type == 'buttons') {
 
-
         foreach ($locations as $x => &$loc) {
             echo "<a class='button gh-blue' href='/location/#'>$loc->post_title</a>";
+        }
+
+    } else if ($type == 'sidebar') {
+
+        foreach ($locations as $x => &$loc) {
+            echo '<li class="menu-item-region-location"><a href="/locations/' . $loc->post_name . '">' . $loc->post_title . '</a></li>';
         }
 
     } else {

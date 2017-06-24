@@ -5,5 +5,75 @@
     min-width: 85px;
     margin: 5px 5px 5px 0;
     padding: 10px;
+
+    &.black {
+      background: #232323;
+      &:hover {
+        background: #111;
+      }
+    }
+  }
+}
+
+.menu-item-region-location {
+  list-style: none;
+  margin: 0 0 10px;
+}
+
+@media all and (max-width: 700px) {
+  .csstransforms .gh-headerdevice-container .gh-headerdevice-1 {
+    height: 180px;
+    width: 100%;
+    margin: 0;
+    top: 40px;
+    transform: none;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .widget-area {
+    padding: 15px 15px 0 15px;
+    & + .content-area {
+      width: 100% !important;
+    }
+  }
+  body.no-sidebar {
+    .widget-area {
+      & + .content-area {
+        width: 100% !important;
+      }
+    }
+  }
+}
+@media all and (min-width: 800px) {
+  body.no-sidebar {
+    .widget-area {
+      display: block !important;
+      & + .content-area {
+        width: 660px !important;
+      }
+    }
+    .content-area {
+      width: 100% !important;
+    }
+  }
+}
+
+@media all and (min-width: 1230px) {
+  body.no-sidebar {
+    .widget-area {
+      display: block !important;
+      & + .content-area {
+        width: 860px !important;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1020px) {
+  .widget-area {
+    padding: 32px 15px 0 15px;
+    margin-left: 0 !important;
+
   }
 }
