@@ -60,7 +60,7 @@ function gh_location_meta_box($object)
 
     <p><label for="twitter"><?php _e("Twitter", 'sequential'); ?></label> <code>twitter</code></p>
     <p><input style="width: 100%;" type="twitter" id="twitter" name="twitter"
-              value="<?php echo esc_attr(get_post_meta($object->ID, 'email', true)); ?>"></p>
+              value="<?php echo esc_attr(get_post_meta($object->ID, 'twitter', true)); ?>"></p>
 
     <h3>Venue information</h3>
 
