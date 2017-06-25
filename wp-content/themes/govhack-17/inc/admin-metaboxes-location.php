@@ -153,22 +153,23 @@ function gh_location_meta_box_save($post_id)
         return;
     }
 
-    // Checks for input and sanitizes/saves if needed
-    update_post_meta($post_id, 'map_latlong', sanitize_text_field($_POST['map_latlong']));
-    update_post_meta($post_id, 'email', sanitize_text_field($_POST['email']));
-    update_post_meta($post_id, 'twitter', sanitize_text_field($_POST['twitter']));
-    update_post_meta($post_id, 'region', sanitize_text_field($_POST['region']));
-    update_post_meta($post_id, 'venue_name', ($_POST['venue_name']));
-    update_post_meta($post_id, 'venue_host', ($_POST['venue_host']));
-    update_post_meta($post_id, 'venue_team', ($_POST['venue_team']));
-    update_post_meta($post_id, 'venue_accessibility', ($_POST['venue_accessibility']));
-    update_post_meta($post_id, 'venue_under_18', ($_POST['venue_under_18']));
-    update_post_meta($post_id, 'venue_capacity', ($_POST['venue_capacity']));
-    update_post_meta($post_id, 'venue_parking', ($_POST['venue_parking']));
-    update_post_meta($post_id, 'venue_public_transport', ($_POST['venue_public_transport']));
-    update_post_meta($post_id, 'venue_public_transport_last', ($_POST['venue_public_transport_last']));
-    update_post_meta($post_id, 'times', ($_POST['times']));
-    update_post_meta($post_id, 'catering', ($_POST['catering']));
+    if (isset($_POST['email'])) {
+        update_post_meta($post_id, 'map_latlong', sanitize_text_field($_POST['map_latlong']));
+        update_post_meta($post_id, 'email', sanitize_text_field($_POST['email']));
+        update_post_meta($post_id, 'twitter', sanitize_text_field($_POST['twitter']));
+        update_post_meta($post_id, 'region', sanitize_text_field($_POST['region']));
+        update_post_meta($post_id, 'venue_name', ($_POST['venue_name']));
+        update_post_meta($post_id, 'venue_host', ($_POST['venue_host']));
+        update_post_meta($post_id, 'venue_team', ($_POST['venue_team']));
+        update_post_meta($post_id, 'venue_accessibility', ($_POST['venue_accessibility']));
+        update_post_meta($post_id, 'venue_under_18', ($_POST['venue_under_18']));
+        update_post_meta($post_id, 'venue_capacity', ($_POST['venue_capacity']));
+        update_post_meta($post_id, 'venue_parking', ($_POST['venue_parking']));
+        update_post_meta($post_id, 'venue_public_transport', ($_POST['venue_public_transport']));
+        update_post_meta($post_id, 'venue_public_transport_last', ($_POST['venue_public_transport_last']));
+        update_post_meta($post_id, 'times', ($_POST['times']));
+        update_post_meta($post_id, 'catering', ($_POST['catering']));
+    }
 
 }
 
