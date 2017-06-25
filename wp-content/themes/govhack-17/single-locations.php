@@ -169,6 +169,8 @@ get_header(); ?>
                     </p>
                 <?php } ?>
 
+                <?php get_template_part('location', 'mentors'); ?>
+
 
             </div><!-- .wrapper -->
         </main><!-- #main -->

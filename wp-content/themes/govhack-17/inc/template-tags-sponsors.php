@@ -315,3 +315,43 @@ function gh_render_locations_list($region_page_id = 0, $type = null)
     }
 
 }
+
+/**
+ * Render locations on region page.
+ *
+ * @author AE <andy@govhack.org>
+ *
+ * @param string Location post ID
+ */
+function gh_has_mentors_list($location_page_id = 0)
+{
+    return sizeof(wp_get_post_terms($location_page_id, 'mentor', array("fields" => "all"))) > 0;
+}
+
+function gh_render_mentors_list($location_page_id = 0)
+{
+
+    $mentors = wp_get_post_terms($location_page_id, 'mentor', array("fields" => "all"));
+    foreach ($mentors as $mentor) {
+
+        $type = get_term_meta($mentor->term_id, 'type', true);
+        $position_title = get_term_meta($mentor->term_id, 'position_title', true);
+        $ask_me_about = get_term_meta($mentor->term_id, 'ask_me_about', true);
+        $organisation = get_term_meta($mentor->term_id, 'organisation', true);
+        $email = get_term_meta($mentor->term_id, 'email', true);
+        $twitter = get_term_meta($mentor->term_id, 'twitter', true);
+        $linkedin = get_term_meta($mentor->term_id, 'linkedin', true);
+
+        echo "<div class='mentor'>";
+        echo "<b>" . $mentor->name . "</b>";
+        echo $position_title ? "<br>" . $position_title : "";
+        echo $organisation ? " <br> " . $organisation : "";
+        echo $ask_me_about ? "<br>" . $ask_me_about : "";
+        echo $email ? "<br>" . $email : "";
+        echo $twitter ? "<br>" . $twitter : "";
+        echo $linkedin ? "<br>" . $linkedin : "";
+        echo "</div>";
+
+    }
+
+}
