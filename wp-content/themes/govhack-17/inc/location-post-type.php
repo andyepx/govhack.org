@@ -50,7 +50,7 @@ function register_location_post_type(){
         'menu_icon' => '',
         'capability_type' => 'post',
         'hierarchical' => true,
-        'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+        'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields', 'author'),
         'rewrite' => array(
             'slug' => 'locations'
         ),
