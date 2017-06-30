@@ -284,6 +284,8 @@ function gh_render_locations_list($region_page_id = 0, $type = null)
     $locations_query = [
         'post_type' => 'locations',
         'posts_per_page' => -1,
+        'order' => 'ASC',
+        'orderby' => 'title',
         'meta_key' => 'region',
         'meta_value' => $region
     ];
