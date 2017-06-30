@@ -171,6 +171,8 @@ get_header(); ?>
 
                 <?php get_template_part('location', 'mentors'); ?>
 
+                <?php get_template_part('location', 'sponsors'); ?>
+
 
             </div><!-- .wrapper -->
         </main><!-- #main -->
