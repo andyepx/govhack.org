@@ -55,7 +55,7 @@ function gh_body_classes( $classes ) {
     }
     
     // SPONSORS: Boxed layout for states 
-    if ( is_home() || is_page() ){
+    if ( is_home() || is_page() || is_single() ){
         $classes[] = 'sponsors-boxed';
     }
 
