@@ -344,13 +344,18 @@ function gh_render_locations_list($region_page_id = 0, $type = null)
  *
  * @author AE <andy@govhack.org>
  *
- * @param string Location post ID
+ * @param int $location_page_id
+ * @return bool
+ * @internal param Location $string post ID
  */
 function gh_has_mentors_list($location_page_id = 0)
 {
     return sizeof(wp_get_post_terms($location_page_id, 'mentor', array("fields" => "all"))) > 0;
 }
 
+/**
+ * @param int $location_page_id
+ */
 function gh_render_mentors_list($location_page_id = 0)
 {
 
@@ -374,6 +379,41 @@ function gh_render_mentors_list($location_page_id = 0)
         echo $twitter ? "<br>" . $twitter : "";
         echo $linkedin ? "<br>" . $linkedin : "";
         echo "</div>";
+
+    }
+
+}
+
+/**
+ *
+ */
+function gh_handbook_chapters()
+{
+
+    $args = array(
+        'meta_key' => 'handbook_section',
+        'meta_value' => '1',
+        'post_type' => 'page',
+        'hierarchical' => 0
+    );
+    $groups = get_pages($args);
+
+    foreach ($groups as $group) {
+
+        $args = array(
+            'post_type' => 'page',
+            'hierarchical' => 0,
+            'child_of' => $group->ID
+        );
+        $sections = get_pages($args);
+        echo "<h4>" . $group->post_title . "</h4>";
+        echo "<ul>";
+
+        foreach ($sections as $section) {
+            echo "<li><a href='" . get_permalink($section->ID) . "'>" . $section->post_title . "</a></li>";
+
+        }
+        echo "</ul>";
 
     }
 

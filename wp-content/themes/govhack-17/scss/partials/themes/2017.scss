@@ -20,12 +20,19 @@
   margin: 0 0 10px;
 }
 
-//.location-sponsors {
-//  margin-top: 2rem;
-//  .row-fluid {
-//      padding: 0;
-//  }
-//}
+.handbook-chapters-list {
+  float: left;
+  width: 220px;
+  margin-top: 25px;
+  & + .site-main {
+    width: calc(100% - 220px);
+    float: left;
+  }
+  ul {
+    list-style: none;
+    margin-left: 20px;
+  }
+}
 
 @media all and (max-width: 700px) {
   .csstransforms .gh-headerdevice-container .gh-headerdevice-1 {
