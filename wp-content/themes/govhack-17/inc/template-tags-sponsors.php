@@ -17,6 +17,17 @@ function gh_has_regional_sponsors()
     // return false;
 }
 
+function gh_has_local_sponsors()
+{
+    global $post;
+    $sponsors_query_args = [
+        'post_type' => 'sponsor',
+        'meta_query' => [['key' => 'sponsor_location_id', 'value' => $post->ID, 'compare' => '=']]
+    ];
+    return count(get_posts($sponsors_query_args)) > 0;
+    // return false;
+}
+
 /**
  * Get the WP page ID of the page which is parent to
  * the individual region pages

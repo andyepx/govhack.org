@@ -175,14 +175,16 @@ get_header(); ?>
         </main><!-- #main -->
 
 
-        <div class="hero region-sponsors-hero" style="margin-top: 40px;">
-            <div class="wrapper">
-                <section class="region-sponsors gh-sponsors">
-                    <h2 class="gh-sponsors-header">2017 Local Sponsors</h2>
-                    <?php get_template_part('location', 'sponsors'); ?>
-                </section>
+        <?php if (gh_has_local_sponsors()): ?>
+            <div class="hero region-sponsors-hero" style="margin-top: 40px;">
+                <div class="wrapper">
+                    <section class="region-sponsors gh-sponsors">
+                        <h2 class="gh-sponsors-header">2017 Local Sponsors</h2>
+                        <?php get_template_part('location', 'sponsors'); ?>
+                    </section>
+                </div>
             </div>
-        </div>
+        <?php endif; ?>
 
     </div><!-- #primary -->
 <?php endwhile; // end of the loop. ?>
