@@ -55,7 +55,7 @@ function gh_get_region_parent_page_id()
  * @param string[] Ordered list of sponsorship types for that taxonomy
  * @param string Region page ID, presense of which indicates we're doing state sponsors
  */
-function gh_render_sponsors($tax_type, $sponsorship_types, $region_page_id = 0)
+function gh_render_sponsors($tax_type, $sponsorship_types, $region_page_id = 0, $location_page_id = 0)
 {
 
     // Blast away types without results
@@ -76,6 +76,11 @@ function gh_render_sponsors($tax_type, $sponsorship_types, $region_page_id = 0)
         if (!empty($region_page_id)) {
             $sponsors_query_args['meta_query'] = [
                 ['key' => 'sponsor_region_id', 'value' => "$region_page_id", 'compare' => '=']
+            ];
+        }
+        if (!empty($location_page_id)) {
+            $sponsors_query_args['meta_query'] = [
+                ['key' => 'sponsor_location_id', 'value' => "$location_page_id", 'compare' => '=']
             ];
         }
 
@@ -103,6 +108,11 @@ function gh_render_sponsors($tax_type, $sponsorship_types, $region_page_id = 0)
         if (!empty($region_page_id)) {
             $sponsors_query_args['meta_query'] = [
                 ['key' => 'sponsor_region_id', 'value' => "$region_page_id", 'compare' => '=']
+            ];
+        }
+        if (!empty($location_page_id)) {
+            $sponsors_query_args['meta_query'] = [
+                ['key' => 'sponsor_location_id', 'value' => "$location_page_id", 'compare' => '=']
             ];
         }
 
