@@ -71,6 +71,7 @@ function gh_sponsor_meta_box($object)
         ?>
     </p>
 
+    <?php if (false): ?>
     <hr>
     <p>
         <label for="gh-sponsor-meta-portal-location-gids"><?php _e("Portal Event IDs (only useful if a local sponsor)", 'sequential'); ?></label>
@@ -127,8 +128,10 @@ function gh_sponsor_meta_box($object)
                class="widefat">
     </p>
     <?php if ($is_portal_type_manual): ?>
-    <p class="howto">Current manual sponsor type
-        is: <?php echo empty($current_sponsor_meta_portal_type) ? '(nothing)' : $current_sponsor_meta_portal_type ?></p>
+        <p class="howto">Current manual sponsor type
+            is: <?php echo empty($current_sponsor_meta_portal_type) ? '(nothing)' : $current_sponsor_meta_portal_type ?></p>
+    <?php endif; ?>
+
 <?php endif; ?>
 
     <?php

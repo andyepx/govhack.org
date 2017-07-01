@@ -64,10 +64,10 @@ function gh_admin_render_sponsor_generator_page(){
 <?php    
 }
 
-function gh_admin_setup_sponsor_generator_page(){
-    add_submenu_page ('edit.php?post_type=sponsor', __( 'Portal .md Generator', 'sequential'), __( 'Portal .md Generator', 'sequential'), 'manage_options', 'sponsor_generator', 'gh_admin_render_sponsor_generator_page');
-}
-add_action( 'admin_menu', 'gh_admin_setup_sponsor_generator_page' );
+//function gh_admin_setup_sponsor_generator_page(){
+//    add_submenu_page ('edit.php?post_type=sponsor', __( 'Portal .md Generator', 'sequential'), __( 'Portal .md Generator', 'sequential'), 'manage_options', 'sponsor_generator', 'gh_admin_render_sponsor_generator_page');
+//}
+//add_action( 'admin_menu', 'gh_admin_setup_sponsor_generator_page' );
 
 
 function gh_admin_sponsor_crunch_init(){
