@@ -22,15 +22,21 @@
 
 .handbook-chapters-list {
   float: left;
-  width: 220px;
+  width: 260px;
   margin-top: 25px;
   & + .site-main {
-    width: calc(100% - 220px);
+    width: calc(100% - 260px);
     float: left;
   }
   ul {
     list-style: none;
-    margin-left: 20px;
+    margin-left: 10px;
+    line-height: 1.8rem;
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0;
   }
 }
 
