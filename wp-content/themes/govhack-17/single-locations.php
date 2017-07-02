@@ -161,6 +161,13 @@ get_header(); ?>
                         <?php echo nl2br($custom_fields['venue_public_transport_last'][0]) ?>
                     </p>
                 <?php } ?>
+                <?php if (array_key_exists('catering', $custom_fields) && strlen($custom_fields['catering'][0]) > 0) { ?>
+                    <p>
+                        <b>Catering: </b>
+                        <br>
+                        <?php echo nl2br($custom_fields['catering'][0]) ?>
+                    </p>
+                <?php } ?>
                 <?php if (array_key_exists('times', $custom_fields) && strlen($custom_fields['times'][0]) > 0) { ?>
                     <p>
                         <b>Opening times: </b>
