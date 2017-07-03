@@ -1,59 +1,68 @@
 .home-hero-pre2017 {
-    text-align: center;
-    //background: url('/wp-content/uploads/2017/06/hero.jpg') no-repeat center center/cover transparent;
-    background: url('/wp-content/uploads/2017/07/hero_tickets.jpg') no-repeat center center/cover transparent;
+  //background: url('/wp-content/uploads/2017/06/hero.jpg') no-repeat center center/cover transparent;
+  background: url('/wp-content/uploads/2017/07/hero_tickets.jpg') no-repeat center center/cover transparent;
 
-    max-height: 350px;
-    overflow: hidden;
-    padding: 1rem 0 !important;
-    text-align: left;
+  max-height: 350px;
+  overflow: hidden;
+  padding: 1rem 0 !important;
+  text-align: left;
 
+  h1 {
+    font-size: 2.7em !important;
+    padding-top: 1.5rem;
+  }
+
+  @media screen and (max-width: 1024px) {
     h1 {
-        font-size: 2.7em !important;
-        padding-top: 1.5rem;
+      font-size: 2em !important;
+      padding: 1rem;
     }
+    text-align: center;
+    height: auto;
+    max-height: 700px;
+  }
+  @media screen and (min-width: 1024px) {
+    text-align: left;
+  }
+  @media screen and (min-width: 500px) and (max-width: 750px) {
+    h1 {
+      font-size: 1.5em !important;
+      padding: 1rem;
+    }
+  }
 
-    @media screen and (max-width: 1024px) {
-        h1 {
-            font-size: 2.5em;
-        }
-        text-align: center;
-        height: auto;
-        max-height: 700px;
+  .gh-pre2017-pin-map {
+    display: block;
+    margin: 0 auto;
+    width: 240px;
+    height: auto;
+    @media screen and (min-width: 1024px) {
+      width: 320px;
+      height: auto;
+      margin-left: -25px;
     }
-    
-    .gh-pre2017-pin-map {
-        display: block;
-        margin: 0 auto;
-        width: 240px;
-        height: auto;
-        @media screen and (min-width: 1024px) {
-            width: 320px;
-            height: auto;
-            margin-left: -25px;
-        }
-    }
-    
-    .gh-2016-review-coverpage {
-        display: block;
-        margin: 0 auto;
-        width: 280px;
-        transform: rotate(-2deg);
-        @media screen and (min-width: 768px) {
-            width: 200px;
-            margin-left: -25px;
-        }
-    }
+  }
 
-    .hero-inner {
-        margin: 20px 0;
+  .gh-2016-review-coverpage {
+    display: block;
+    margin: 0 auto;
+    width: 280px;
+    transform: rotate(-2deg);
+    @media screen and (min-width: 768px) {
+      width: 200px;
+      margin-left: -25px;
     }
-    
+  }
+
+  .hero-inner {
+    margin: 20px 0;
+  }
+
 }
 
 .home-hero-pre2017 {
-    a:not([class^=button]) {
-        text-decoration: none;
-        border: none;
-    }
+  a:not([class^=button]) {
+    text-decoration: none;
+    border: none;
+  }
 }
