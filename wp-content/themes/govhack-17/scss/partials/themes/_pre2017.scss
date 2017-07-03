@@ -14,15 +14,33 @@
 
   @media screen and (max-width: 1024px) {
     h1 {
+      font-size: 1.6em !important;
+      padding: 1rem;
+    }
+    text-align: left;
+    height: auto;
+    max-height: 700px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1230px) {
+    h1 {
+      font-size: 2em !important;
+      padding: 1rem;
+    }
+    text-align: left;
+  }
+  @media screen and (max-width: 780px)  {
+    h1 {
       font-size: 2em !important;
       padding: 1rem;
     }
     text-align: center;
-    height: auto;
-    max-height: 700px;
   }
-  @media screen and (min-width: 1024px) {
-    text-align: left;
+  @media screen and (max-width: 490px)  {
+    h1 {
+      font-size: 1.2em !important;
+      padding: 1rem;
+    }
+    text-align: center;
   }
   @media screen and (min-width: 500px) and (max-width: 750px) {
     h1 {
