@@ -6,23 +6,23 @@
  */
 
 // All for the sake of being able to show the number of active locations in the tooltip
-try {
-    $loc_parser = gh_get_location_parser();
-    $loc_parser->parse_locations();
-    $au_count = $loc_parser->get_region_counts(['nsw', 'act', 'qld', 'vic', 'tas', 'wa', 'sa', 'nt']);
-    $nz_count = $loc_parser->get_region_counts(['nz']);
-    $au_count = array_sum($au_count);
-    $nz_count = array_sum($nz_count);
-    // if ( is_wp_error($au_count) || is_wp_error($nz_count) ){
-    // throw new Exception();
-    // }
-} catch (Exception $ex) {
-    // Anything could happen...
-    $au_count = $nz_count = 0;
-} finally {
-    $au_tooltip = !(empty($au_count) || is_wp_error($au_count)) ? "Across $au_count locations and counting" : 'In major cities and regional centres around Australia';
-    $nz_tooltip = !(empty($nz_count) || is_wp_error($nz_count)) ? "Across $nz_count locations and counting" : 'In major cities and regional centres around New Zealand';
-}
+//try {
+//    $loc_parser = gh_get_location_parser();
+//    $loc_parser->parse_locations();
+//    $au_count = $loc_parser->get_region_counts(['nsw', 'act', 'qld', 'vic', 'tas', 'wa', 'sa', 'nt']);
+//    $nz_count = $loc_parser->get_region_counts(['nz']);
+//    $au_count = array_sum($au_count);
+//    $nz_count = array_sum($nz_count);
+//    // if ( is_wp_error($au_count) || is_wp_error($nz_count) ){
+//    // throw new Exception();
+//    // }
+//} catch (Exception $ex) {
+//    // Anything could happen...
+//    $au_count = $nz_count = 0;
+//} finally {
+//    $au_tooltip = !(empty($au_count) || is_wp_error($au_count)) ? "Across $au_count locations and counting" : 'In major cities and regional centres around Australia';
+//    $nz_tooltip = !(empty($nz_count) || is_wp_error($nz_count)) ? "Across $nz_count locations and counting" : 'In major cities and regional centres around New Zealand';
+//}
 
 
 get_header(); ?>

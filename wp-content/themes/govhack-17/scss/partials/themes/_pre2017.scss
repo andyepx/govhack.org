@@ -1,13 +1,25 @@
 .home-hero-pre2017 {
     text-align: center;
-    background: url('/wp-content/uploads/2017/06/hero.jpg') no-repeat center center/cover transparent;
-    
-    @media screen and (min-width: 768px) {
+    //background: url('/wp-content/uploads/2017/06/hero.jpg') no-repeat center center/cover transparent;
+    background: url('/wp-content/uploads/2017/07/hero_tickets.jpg') no-repeat center center/cover transparent;
+
+    max-height: 350px;
+    overflow: hidden;
+    padding: 1rem 0 !important;
+    text-align: left;
+
+    h1 {
+        font-size: 2.7em !important;
+        padding-top: 1.5rem;
+    }
+
+    @media screen and (max-width: 1024px) {
         h1 {
-            font-size: 3em;
+            font-size: 2.5em;
         }
-        text-align: left;
-        background: url('/wp-content/uploads/2017/06/hero.jpg') no-repeat center top/cover transparent;
+        text-align: center;
+        height: auto;
+        max-height: 700px;
     }
     
     .gh-pre2017-pin-map {
