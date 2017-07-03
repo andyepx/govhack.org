@@ -92,7 +92,7 @@ function gh_scripts()
     $scss_comparator = function ($name) {
         return file_exists(get_stylesheet_directory() . "/css/$name.css")
             ? "/css/$name.css"
-            : "/parse_scss.php?p=$name.scss";
+            : "/parse_scss.php?p=$name.scss&v=5.0";
     };
 
     $scss_overrides_uri = $scss_comparator('overrides');
