@@ -52,7 +52,11 @@
     border-radius: 0 5px 5px 0;
     transition: left .5s ease-in-out;
     &.expanded {
-      left: 0px;
+      left: 0;
+      &:before {
+        transform: rotate(180deg);
+        text-align: left;
+      }
     }
     &:after {
       content: ' ';
