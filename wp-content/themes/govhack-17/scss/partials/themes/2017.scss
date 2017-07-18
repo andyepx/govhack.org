@@ -51,7 +51,7 @@
     background: white;
     z-index: 100;
     top: 170px;
-    left: -260px;
+    left: -258px;
     padding: 10px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
     border-radius: 0 5px 5px 0;
@@ -69,24 +69,24 @@
       height: 40px;
       position: absolute;
       right: -20px;
-      background: white;
+      background: $gh-pink;
       top: 50%;
       border-radius: 0 5px 5px 0;
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
     }
     &:before {
       content: "\000bb";
-      width: 20px;
+      width: 10px;
       height: 40px;
       position: absolute;
       right: -14px;
-      background: white;
+      background: $gh-pink;
       top: 50%;
       z-index: 2;
       line-height: 36px;
       font-size: 19px;
       text-align: right;
-      color: #999;
+      color: white;
     }
   }
   .handbook-chapters-list + #main {
