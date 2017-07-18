@@ -48,7 +48,7 @@
     top: 170px;
     left: -260px;
     padding: 10px;
-    box-shadow: 0 0 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
     border-radius: 0 5px 5px 0;
     transition: left .5s ease-in-out;
     &.expanded {
@@ -67,7 +67,7 @@
       background: white;
       top: 50%;
       border-radius: 0 5px 5px 0;
-      box-shadow: 0 0 3px;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
     }
     &:before {
       content: "\000bb";
