@@ -40,6 +40,51 @@
   }
 }
 
+@media all and (max-width: 450px) {
+  .handbook-chapters-list {
+    position: absolute;
+    background: white;
+    z-index: 100;
+    top: 170px;
+    left: -260px;
+    padding: 10px;
+    box-shadow: 0 0 3px;
+    border-radius: 0 5px 5px 0;
+    transition: left .5s ease-in-out;
+    &.expanded {
+      left: 0px;
+    }
+    &:after {
+      content: ' ';
+      width: 20px;
+      height: 40px;
+      position: absolute;
+      right: -20px;
+      background: white;
+      top: 50%;
+      border-radius: 0 5px 5px 0;
+      box-shadow: 0 0 3px;
+    }
+    &:before {
+      content: "\000bb";
+      width: 20px;
+      height: 40px;
+      position: absolute;
+      right: -14px;
+      background: white;
+      top: 50%;
+      z-index: 2;
+      line-height: 36px;
+      font-size: 19px;
+      text-align: right;
+      color: #999;
+    }
+  }
+  .handbook-chapters-list + #main {
+    width: 100%;
+  }
+}
+
 @media all and (max-width: 700px) {
   .csstransforms .gh-headerdevice-container .gh-headerdevice-1 {
     height: 180px;

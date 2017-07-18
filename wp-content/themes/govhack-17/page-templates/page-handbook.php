@@ -17,6 +17,12 @@ get_header(); ?>
 
             <?php endwhile; // end of the loop. ?>
 
+            <script>
+                jQuery('.handbook-chapters-list').click(function () {
+                    jQuery('.handbook-chapters-list').toggleClass('expanded');
+                })
+            </script>
+
         </main><!-- #main -->
     </div><!-- #primary -->
 
