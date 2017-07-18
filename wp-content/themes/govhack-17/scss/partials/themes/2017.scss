@@ -40,7 +40,12 @@
   }
 }
 
-@media all and (max-width: 450px) {
+@media all and (max-width: 550px) {
+  .handbook-home-page {
+    background: none !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
   .handbook-chapters-list {
     position: absolute;
     background: white;
