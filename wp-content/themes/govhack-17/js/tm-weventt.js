@@ -2,35 +2,37 @@ function tm_event_time() {
     function e(e) {
         return (e < 10 && "0") + e
     }
+
     var t, a, l, n, o, s = document.getElementsByClassName("tm-event_time"),
         i = new Date(Date.UTC(2017, 6, 3, 0, 0)),
         c = new Date;
     n = o = Math.floor((i.getTime() - c.getTime()) / 1e3), n -= 86400 * (t = e(Math.floor(n / 86400))), n -= 3600 * (a = e(Math.floor(n / 3600))), n -= 60 * (l = e(Math.floor(n / 60))), n = e(Math.floor(n)), o <= 0 ? t = a = l = n = "00" : setTimeout(tm_event_time, 1e3);
     for (var m = 0; m < s.length; ++m) s[m].innerHTML = '<div class="row"><div class="col-lg-3 col-md-3 col-sm-6 col-xs-6"><div class="tm-event_time-box"><span class="number">' + t + '</span><span class="title">day' + (t > 1 ? "s" : "") + '</span></div></div><div class="col-lg-3 col-md-3 col-sm-6 col-xs-6"><div class="tm-event_time-box"><span class="number">' + a + '</span><span class="title">hour' + (a > 1 ? "s" : "") + '</span></div></div><div class="col-lg-3 col-md-3 col-sm-6 col-xs-6"><div class="tm-event_time-box"><span class="number">' + l + '</span><span class="title">minute' + (l > 1 ? "s" : "") + '</span></div></div><div class="col-lg-3 col-md-3 col-sm-6 col-xs-6"><div class="tm-event_time-box"><span class="number">' + n + '</span><span class="title">second' + (n > 1 ? "s" : "") + "</span></div></div></div>\x3c!--//row--\x3e"
 }
-$(document).on("ready", function() {
+
+jQuery(document).ready(function ($) {
     "use strict";
-    setTimeout(function() {
+    setTimeout(function () {
         $(".tm-loader").addClass("active")
-    }, 3e3), $(window).scroll(function() {
+    }, 3e3), $(window).scroll(function () {
         $(this).scrollTop() > 100 ? $(".tm-header").addClass("active") : $(".tm-header").removeClass("active"), $(this).scrollTop() > 300 ? $("#tmScrollTop").addClass("active") : $("#tmScrollTop").removeClass("active")
-    }), $("#tmScrollTop").on("click", function() {
+    }), $("#tmScrollTop").on("click", function () {
         return $("html, body").animate({
             scrollTop: "0"
         }, 500), !1
-    }), tm_event_time(), $(".tmTooltip").tooltip(), $(".tm-header_icon-nav .tm-header_icon-inner").on("click", function() {
+    }), tm_event_time(), $(".tmTooltip").tooltip(), $(".tm-header_icon-nav .tm-header_icon-inner").on("click", function () {
         event.preventDefault(), $("#tm-resp-nav").addClass("active"), $(".tm-background-overlay").addClass("active"), document.body.style.overflow = "hidden"
-    }), $(".tm-side-box_header-close").on("click", function() {
+    }), $(".tm-side-box_header-close").on("click", function () {
         event.preventDefault(), $(this).parent().parent().parent().removeClass("active"), $(".tm-background-overlay").removeClass("active"), document.body.style.overflow = "visible"
-    }), $("#tm-resp-nav .nav-link").on("click", function() {
+    }), $("#tm-resp-nav .nav-link").on("click", function () {
         event.preventDefault(), $("#tm-resp-nav").removeClass("active"), $(".tm-background-overlay").removeClass("active"), document.body.style.overflow = "visible"
-    }), $(".tm-header_icon-lang .tm-header_icon-inner").on("click", function() {
+    }), $(".tm-header_icon-lang .tm-header_icon-inner").on("click", function () {
         event.preventDefault(), $(".tm-language_bar").addClass("active"), $(".tm-background-overlay").addClass("active"), document.body.style.overflow = "hidden"
-    }), $(".tm-language_bar a").on("click", function() {
+    }), $(".tm-language_bar a").on("click", function () {
         event.preventDefault(), $(".tm-language_bar").removeClass("active"), $(".tm-background-overlay").removeClass("active"), document.body.style.overflow = "visible"
-    }), $(".btn-promo_detail").on("click", function() {
+    }), $(".btn-promo_detail").on("click", function () {
         event.preventDefault(), $("#tm-promo_detail").addClass("active"), $(".tm-background-overlay").addClass("active"), document.body.style.overflow = "hidden"
-    }), $("*").on("click", function(e) {
+    }), $("*").on("click", function (e) {
         $(e.target).is(".tm-target") || $(e.target).is(".tm-target *") || ($(".tm-target").removeClass("active"), $(".tm-background-overlay").removeClass("active"), document.body.style.overflow = "visible")
     }), $("#tm-slider_carousel").owlCarousel({
         loop: !0,
@@ -62,9 +64,9 @@ $(document).on("ready", function() {
         items: 1,
         animateOut: "slideOutUp",
         animateIn: "slideInUp"
-    }), $(".tm-schedule_title-resp").on("click", function() {
+    }), $(".tm-schedule_title-resp").on("click", function () {
         event.preventDefault(), $(".tm-schedule_title .nav-tabs").toggleClass("active")
-    }), $(".tm-schedule_title .nav-tabs li").on("click", function() {
+    }), $(".tm-schedule_title .nav-tabs li").on("click", function () {
         event.preventDefault();
         var e = $(this).find(".title").html(),
             t = $(this).find(".badge").html();
@@ -112,7 +114,7 @@ $(document).on("ready", function() {
         mainClass: "mfp-with-zoom mfp-img-mobile",
         image: {
             verticalFit: !0,
-            titleSrc: function(e) {
+            titleSrc: function (e) {
                 return e.el.attr("title") + ' &middot; <a class="image-source-link" href="' + e.el.attr("data-source") + '" target="_blank">image source</a>'
             }
         },
@@ -122,11 +124,11 @@ $(document).on("ready", function() {
         zoom: {
             enabled: !0,
             duration: 300,
-            opener: function(e) {
+            opener: function (e) {
                 return e.find("img")
             }
         }
-    }), $(".tm-header_nav, .tm-resp-nav_nav").on("click", 'a[href^="#"]', function(e) {
+    }), $(".tm-header_nav, .tm-resp-nav_nav").on("click", 'a[href^="#"]', function (e) {
         var t = $(this).attr("href");
         if (0 !== $(t).length) {
             e.preventDefault();
