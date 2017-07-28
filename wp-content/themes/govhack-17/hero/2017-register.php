@@ -38,7 +38,7 @@ if (time() > strtotime('2017-07-28 19:00')) { //DURING
         </div>
     </div>
     <?php
-} else if (time() > strtotime('2017-07-31 21:00')) { // AFTER
+} else if (time() > strtotime('2017-07-30 21:00')) { // AFTER
     ?>
 
     <div class="hero home-hero-pre2017 after" role="banner">
