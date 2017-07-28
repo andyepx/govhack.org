@@ -60,7 +60,7 @@ jQuery ? GH.opts = jQuery.extend({
             // },
             {
                 name: "Hackerspace",
-                href: "https://2016.hackerspace.govhack.org",
+                href: "https://2017.hackerspace.govhack.org",
                 fa: "fa-drupal",
                 dashicons: "dashicons-megaphone"
             }
