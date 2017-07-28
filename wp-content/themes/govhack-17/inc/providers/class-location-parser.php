@@ -45,7 +45,7 @@ class GH_Location_Parser
 
     public function __construct()
     {
-        $this->jabberwocky_url = defined('GH_PORTAL_URL') ? GH_PORTAL_URL : 'http://portal.govhack.org';        // a sensible default
+        $this->jabberwocky_url = 'https://govhack.org';
         $this->jabberwocky_api_endpoint = '/feed/locations/all.json';
 
         $jabberwocky_defined = defined('GH_LOCATION_PROVIDER_METHOD') && in_array(GH_LOCATION_PROVIDER_METHOD, ['portal', 'data', 'jabberwocky', 'jb']);

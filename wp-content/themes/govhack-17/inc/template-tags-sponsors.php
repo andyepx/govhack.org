@@ -259,6 +259,16 @@ function gh_render_sponsors_carousel($tax_type, $sponsorship_types, $region_page
 
 }
 
+function gs_all_locations_list() {
+    $locations_query = [
+        'post_type' => 'locations',
+        'posts_per_page' => -1
+    ];
+    $locations = get_posts($locations_query);
+
+    return $locations;
+}
+
 /**
  * Render locations on region page.
  *
