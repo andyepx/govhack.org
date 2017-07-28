@@ -20,12 +20,12 @@ if (time() > strtotime('2017-07-28 19:00')) { //DURING
                                 <br>
                                 Remember all entries must be complete by 5pm, Sunday 30 July.
                             </p>
-                            <a class="button gh-pink" style="color: white;" href="/handbook">
+                            <a class="button gh-pink fix-width" style="color: white;" href="/handbook">
                                 Read the handbook
                             </a>
                             <br>
                             <br>
-                            <a class="button gh-blue" style="color: white;" href="//hackerspace.govhack.org">
+                            <a class="button gh-blue fix-width" style="color: white;" href="//hackerspace.govhack.org">
                                 Get started on hackerspace
                             </a>
                             <br>

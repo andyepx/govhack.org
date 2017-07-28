@@ -3,6 +3,9 @@
 
   &.during {
     background: url('/wp-content/uploads/2017/07/liftoff.jpg') no-repeat center center/cover transparent;
+    .button.fix-width {
+      width: 350px;
+    }
   }
   &.after {
     background: url('/wp-content/uploads/2017/07/hero_tickets.jpg') no-repeat center center/cover transparent;
