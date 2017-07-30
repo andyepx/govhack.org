@@ -23,6 +23,12 @@
     border: none;
     border-bottom: $tile-under-border-height solid $gh-lightgrey;
 
+    &.countup-tile {
+      h3 {
+        font-size: 2.5rem;
+      }
+    }
+
     @media screen and (min-width: 768px) {
       background-size: cover;
 
@@ -30,7 +36,7 @@
       transition: transform .1s linear;
 
       // .csstransforms &:focus,
-      .csstransforms &:hover {
+      .csstransforms &:hover  {
         &:not(.no-link) {
           transform: scale(1.02);
         }
