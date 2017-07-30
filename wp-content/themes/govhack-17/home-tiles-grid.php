@@ -48,7 +48,7 @@ wp_reset_query();
                 useEasing: true,
                 useGrouping: true,
                 separator: ',',
-                decimal: '.'
+                decimal: '.',
                 suffix: suffix
             };
             var countup = new CountUp(this, 0, numTo, 0, 2.5, options);
