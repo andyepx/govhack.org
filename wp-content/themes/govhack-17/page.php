@@ -20,7 +20,6 @@ get_header(); ?>
 
             <?php get_template_part( 'content', 'page' ); ?>
                 
-            
         <?php endwhile; // end of the loop. ?>
         
 		</main><!-- #main -->
