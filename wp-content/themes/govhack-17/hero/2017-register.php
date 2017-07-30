@@ -10,10 +10,6 @@ if (time() > strtotime('2017-07-30 21:00')) { // AFTER
             <div>
                 <div class="wrapper">
                     <?php gh_row_open() ?>
-                    <div class="<?= gh_col_class(2, 6) ?>">
-                        <img class="gh-pre2017-pin-map"
-                             src="<?= esc_url(home_url('/wp-content/uploads/2017/06/hero.png')) ?>" alt="Tickets">
-                    </div>
                     <div class="<?= gh_col_class(4, 6) ?>">
                         <div class="hero-inner">
                             <h1 class="">
