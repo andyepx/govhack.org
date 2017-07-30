@@ -31,10 +31,14 @@
 
       // .csstransforms &:focus,
       .csstransforms &:hover {
-        transform: scale(1.02);
+        &:not(.no-link) {
+          transform: scale(1.02);
+        }
       }
       .csstransforms &:active {
-        transform: scale(.98);
+        &:not(.no-link) {
+          transform: scale(.98);
+        }
       }
 
     }

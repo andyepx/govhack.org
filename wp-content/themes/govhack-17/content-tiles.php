@@ -64,7 +64,8 @@ while (have_posts()) : the_post();
 
     ?>
     <div class="<?php echo implode(' ', $tile_wrapper_classnames) ?>">
-        <a class="tile <?= implode(' ', $tile_classnames) ?>" href="<?= $tile_link ?>"
+        <a class="tile <?= implode(' ', $tile_classnames) ?>"
+           <?php if (strpos(implode(' ', $tile_classnames), 'no-link') === false) { ?>href="<?= $tile_link ?>"<?php } ?>
            style="<?= implode('; ', $tile_styles) ?>" <?= implode(' ', $tile_attributes) ?>>
             <div class="tile-caption">
                 <h3><?php the_title() ?></h3>
