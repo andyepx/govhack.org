@@ -21,9 +21,6 @@ if (time() > strtotime('2017-07-30 21:00')) { // AFTER
                                 <br>
                                 Watch for details of our state and territory awards night... Coming soon.
                             </p>
-                            <a class="button gh-pink" style="color: white;" href="/register">
-                                Get your tickets here
-                            </a>
                         </div><!-- gh_col_close -->
                     </div>
                     <?php gh_row_close() ?>
