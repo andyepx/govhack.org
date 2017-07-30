@@ -142,15 +142,19 @@ get_header(); ?>
                 <?php endif; ?>
             </div>
         </div>
-
-        <div class="content-area full-width" style="text-align: center; padding: 0;">
-            <div class="gh-sponsors wrapper">
-                <iframe width="711" height="400"
-                        style="display: inline-block;"
-                        src="https://www.youtube.com/embed/DK-A7zP-GxU?rel=0&amp;controls=0&amp;showinfo=0"
-                        frameborder="0" allowfullscreen></iframe>
+        <?php
+        date_default_timezone_set('Australia/Sydney');
+        if (time() > strtotime('2017-07-30 18:00')) {
+            ?>
+            <div class="content-area full-width" style="text-align: center; padding: 0;">
+                <div class="gh-sponsors wrapper">
+                    <iframe width="711" height="400"
+                            style="display: inline-block;"
+                            src="https://www.youtube.com/embed/DK-A7zP-GxU?rel=0&amp;controls=0&amp;showinfo=0"
+                            frameborder="0" allowfullscreen></iframe>
+                </div>
             </div>
-        </div>
+        <?php } ?>
 
         <div class="content-area full-width">
             <div class="gh-sponsors wrapper">
