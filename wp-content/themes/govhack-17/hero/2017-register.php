@@ -20,6 +20,8 @@ if (time() > strtotime('2017-07-30 21:00')) { // AFTER
                                 mentors, coaches and volunteers who made it so great!
                                 <br>
                                 Watch for details of our state and territory awards night... Coming soon.
+                                <br>
+                                <br>
                             </p>
                         </div><!-- gh_col_close -->
                     </div>
