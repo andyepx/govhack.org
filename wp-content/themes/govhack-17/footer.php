@@ -153,8 +153,8 @@
             <div class="site-info">
                 <em>GovHack</em> and the <em>GovHack Logo</em> are registered trademarks of GovHack Australia
                 Limited.<br>Unless indicated otherwise, all other content on this site is licensed under a <a
-                        href="https://creativecommons.org/licenses/by-nc-nd/3.0/us/legalcode" target="_blank">CC
-                    BY-NC-ND 3.0 US</a>.
+                        href="https://creativecommons.org/licenses/by/3.0/au/legalcode" target="_blank">CC
+                    BY 3.0 AU</a>.
                 <!-- Yes we are proud, sorry can't show it though.. <div>
                     <a href="http://wordpress.org/">Proudly powered by WordPress</a>
                 </div>-->
