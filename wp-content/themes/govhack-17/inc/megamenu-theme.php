@@ -58,13 +58,11 @@ function megamenu_add_theme_default_1464429237($themes) {
         'toggle_background_to' => '#222',
         'toggle_font_color' => 'rgb(51, 51, 51)',
         'custom_css' => '#{$wrap} #{$menu} {
-    /** Custom styles should be added below this line **/
-        #mega-menu-primary .mega-sub-menu .mega-menu-item:last-child { background: #333;  }
-        #mega-menu-primary .mega-sub-menu .mega-menu-item:last-child::after { display: block; content: '';  }
-}
-#{$wrap} {
-    clear: both;
-}',
+        /** Custom styles should be added below this line **/
+        }
+        #{$wrap} {
+            clear: both;
+        }',
     );
     return $themes;
 }

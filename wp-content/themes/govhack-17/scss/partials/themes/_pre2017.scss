@@ -13,6 +13,9 @@
   &.post-comp {
     background: url('/wp-content/uploads/2017/08/hero_medals.jpg') no-repeat center center/cover transparent;
   }
+  &.rca {
+    background: url('/wp-content/uploads/2017/09/red_carpet.jpg') no-repeat center center/cover transparent;
+  }
 
   max-height: 350px;
   overflow: hidden;
@@ -40,21 +43,27 @@
     }
     text-align: left;
   }
-  @media screen and (max-width: 780px)  {
+  @media screen and (max-width: 780px) {
     h1 {
       font-size: 2em !important;
       padding: 1rem;
     }
     text-align: center;
   }
-  @media screen and (max-width: 490px)  {
+  @media screen and (max-width: 490px) {
     h1 {
-      font-size: 1.2em !important;
+      font-size: 1.8em !important;
       padding: 1rem;
     }
     &.during {
       h1 {
         font-size: 1.8rem !important;
+      }
+    }
+    .hero-inner {
+      margin: 20px !important;
+      .gh-blue {
+        margin-bottom: 10px;
       }
     }
     text-align: center;
@@ -63,6 +72,12 @@
     h1 {
       font-size: 1.5em !important;
       padding: 1rem;
+    }
+    .hero-inner {
+      margin: 20px !important;
+      .gh-blue {
+        margin-bottom: 10px;
+      }
     }
   }
 

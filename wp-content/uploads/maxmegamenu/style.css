@@ -384,12 +384,12 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF5F5F5', endColorstr='#FFEBEBEB');
   padding: 0px 0px 0px 20px;
   position: absolute;
-  width: 100%;
   border-top: 0px solid #fff;
   border-left: 0px solid #fff;
   border-right: 0px solid #fff;
   border-bottom: 0px solid #fff;
-  left: 0;
+  width: 70%;
+  left: 30%;
 }
 @media only screen and (max-width: 600px) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu {
@@ -901,22 +901,22 @@
   overflow: hidden;
 }
 #mega-menu-wrap-primary #mega-menu-primary > .mega-menu-item > .mega-sub-menu > .mega-menu-item:last-child {
-  background: #555;
-  color: white;
+  /*background: #555;*/
+  /*color: white;*/
 }
 #mega-menu-wrap-primary #mega-menu-primary > .mega-menu-item > .mega-sub-menu > .mega-menu-item:last-child .mega-menu-link {
-  color: white !important;
+  /*color: white !important;*/
 }
 #mega-menu-wrap-primary #mega-menu-primary > .mega-menu-item > .mega-sub-menu > .mega-menu-item:last-child::after {
-  display: block;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #555;
-  height: 600%;
-  z-index: -1;
+  /*display: block;*/
+  /*content: "";*/
+  /*position: absolute;*/
+  /*top: 0;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*background: #555;*/
+  /*height: 600%;*/
+  /*z-index: -1;*/
 }
 @media screen and (max-width: 599px) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item {
