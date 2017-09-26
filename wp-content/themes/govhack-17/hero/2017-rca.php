@@ -19,6 +19,7 @@
                                 find out more
                             </a>
                             <a class="button gh-pink" style="color: white;"
+                               target="_blank"
                                href="https://www.eventbrite.com.au/e/govhack-2017-international-red-carpet-awards-tickets-38075264140">
                                 book tickets
                             </a>
