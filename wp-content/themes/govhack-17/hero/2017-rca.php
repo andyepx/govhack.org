@@ -3,18 +3,18 @@
         <div>
             <div class="wrapper">
                 <?php gh_row_open() ?>
-                <div class="<?= gh_col_class(4, 6) ?>">
+                <div class="<?= gh_col_class(5, 6) ?>">
                     <div class="hero-inner">
                         <h1 class="">
                             Lights, camera, action!
                         </h1>
                         <p>
-                            It's time to the best of the best, at the 2017 GovHack international Red carpet Awards.
+                            It's time to celebrate the best of the best, at the 2017 GovHack International Red Carpet Awards.
                             <br>
                             This year's awards will be held at the Brisbane City Hall, on Saturday 14 October.
                             <br>
                             <br>
-                            <a class="button gh-blue" style="color: white;"
+                            <a class="button gh-blue first-button" style="color: white;"
                                href="/about-us/red-carpet-awards/">
                                 find out more
                             </a>
