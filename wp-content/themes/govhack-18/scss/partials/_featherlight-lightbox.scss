@@ -1,0 +1,84 @@
+// Featherlight lightbox
+// Quick styling
+
+.featherlight.lightbox-white {
+    
+    &.featherlight:last-of-type {
+        background: white;
+        background: rgba(255,255,255,.95);
+        // @include blur(2px);
+    }
+    
+    iframe {
+        width: 1200px;
+        height: 95vh;
+        max-height: 95vh;
+        margin-bottom: 0;
+    }
+    
+}
+
+.featherlight.lightbox-fullscreen {
+
+    // make it a bit bigger
+    .featherlight-close-icon {
+        width: 40px;
+        line-height: 40px;
+        font-size: 1.4em;
+        background: rgba(255,255,255,.8);
+    }
+
+    .featherlight-content {
+        max-height: 95vh;
+        border: 8px solid $color-clouds;
+        border: 8px solid rgba(220,220,220,0.3);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    &.featherlight-loading .featherlight-content {
+        padding: 25px 40px;
+    }
+
+    &.featherlight-loading .featherlight-inner {
+
+        &::before {
+            @include pacman-loading('blue');
+            content: '';
+            margin-right: 1em;
+            float: left;
+        }
+        &::after {
+            @include pacman-loading('pink');
+            content: '';
+            margin-right: 1em;
+            float: left;
+        }
+    }
+
+    @media screen and (max-width: 1024px){
+        .featherlight-content {
+            max-width: 100wh;
+            max-height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+        }
+
+        &.featherlight-loading .featherlight-content {
+            text-align: center;
+            .featherlight-inner {
+                position: relative;
+                padding: 2em 0;
+                top: -1em;
+                text-align: center;
+                margin: 40% auto;
+                display: inline-block;
+            }
+        }
+    }
+
+}

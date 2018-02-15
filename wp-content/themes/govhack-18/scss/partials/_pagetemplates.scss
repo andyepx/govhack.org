@@ -1,0 +1,215 @@
+/*=======================
+ GH '16  Theme - Page Template mods
+ @author AY
+ ========================*/
+
+
+// Default page page -- overrides
+body.no-sidebar .widget-area {
+    display: none;
+}
+
+.entry-header .entry-title {
+
+    @media screen and (min-width: 1020px){
+        font-size: 3.6em;
+        color: $gh-lightgrey;
+        margin-left: -3px;
+        
+        .grid-area & {
+            font-size: 1.4em;
+        }        
+    }
+
+    
+}
+
+body:not(.full-width-layout):not(.no-sidebar) .widget-area {
+    
+    float: left;        // I want a LHS sidebar
+    background: transparent;
+    
+    &::after, &::before {
+        display: none;
+    }
+    
+    .widget {
+        // padding-top: $content-area-padding;
+        // padding-bottom: $content-area-padding;
+        // border: 2px solid $gh-border-grey;
+        // border-radius: $container-border-radius;
+        .widget-title {
+            color: $gh-grey;
+            .csstransforms & {
+                transform: rotate(-3deg) translateX(-6px);
+            }
+        }
+        @media screen and (min-width: 1020px) {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+    
+    .widget_subpages ul {
+        
+        li {
+            border-left: 3px solid $gh-blue;
+            &.widget_subpages_current_page {
+                border-left: 6px solid $gh-pink;
+            }
+        }
+        
+        li {
+            a {
+                padding-left: 20px;
+                color: $color-silver;
+                background: transparent;
+                &:hover  {
+                    background: $gh-border-grey;
+                    &, a {
+                        color: $gh-grey;
+                    }
+                }
+            }
+            &.widget_subpages_current_page a {
+                color: $gh-grey;
+            }
+        }
+    }
+        
+    
+    @media screen and (min-width: 1020px) {
+        width: 216px;
+        margin-left: -36px;
+        margin-right: 0;
+    }
+}
+
+body:not(.full-width-layout):not(.no-sidebar) .content-area {
+    float: right;
+    
+    @media screen and (min-width: 1020px) {
+        width: 660px;
+    }
+    @media screen and (min-width: 1230px) {
+        width: 860px;
+    }
+    
+}
+
+// List menus in general
+.widget widget_subpages ul {
+    @extend %list-menu;
+}
+
+// Hero
+.hero {
+    a.button-minimal {
+        &:hover, &:focus, &:active {
+            color: #1F1812;
+            text-shadow: none;
+        }
+    }
+}
+
+
+// Site content main wrapper thingo
+.site-content {
+    min-height: 40vh;
+    .breadcrumb-wrapper {
+        margin: -.5em 0 $section-margin;
+        .extra-spacing & {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.content-wrapper {
+    margin: $section-margin 0;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+
+// Content sections
+.content-area {
+    padding-top: $content-area-padding / 2;
+    padding-bottom: $content-area-padding / 2;
+    .extra-spacing & {
+        padding-top: $content-area-padding;
+        padding-bottom: $content-area-padding;        
+    }    
+    @media screen and (min-width: 1020px){
+        padding-top: $content-area-padding;
+        padding-bottom: $content-area-padding;
+        .extra-spacing & {
+            padding-top: $content-area-padding * 1.4;
+            padding-bottom: $content-area-padding * 1.4;        
+        }
+    }
+}
+
+.content-area-gray {
+    background: $color-clouds;
+}
+
+.breadcrumb {
+    font-size: .85em;
+}
+
+.entry-header {
+    
+}
+
+
+
+// Grid page
+
+body[class*="grid-page"] .content-area {
+    background: transparent;
+}
+.grid-area {
+    background: #f7f7f7;
+}
+
+
+// Search page 
+.search {
+    .search-result {
+        margin: 1em 0;
+    }
+    .search-header {
+        margin: 0 0 0.5em;
+        
+        & > * {
+            margin: 0;
+        }
+        
+    }
+    .search-title {
+        color: $color-belize-hole;
+        font-size: 1.6em;
+        font-weight: normal;
+    }
+    .search-result-url {
+        font-size: .9em;
+        font-weight: normal;
+        color: $color-green-sea;
+    }
+}
+
+
+
+// Work in progress
+.wip-alert {
+    font-family: monospace;
+    background: whitesmoke;
+    color: #444;
+    font-size: 1em;
+    padding: 20px 30px;
+
+    border-left: 6px solid $gh-blue;
+    border-right: 6px solid $gh-pink;
+}
+

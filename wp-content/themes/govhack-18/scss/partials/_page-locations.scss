@@ -1,0 +1,291 @@
+/*=======================
+ GH '16  Theme - Locations CSS
+ @author AY
+ ========================*/
+ 
+.counter {
+    
+    display: inline-block;
+
+    &.total-counter {
+        @include animation(".3s ease 2s pulse");
+    }
+    &.official-counter {
+        background: $gh-pink;
+        @include animation(".3s ease 2.8s pulse");
+    }
+    &.node-counter {
+        background: $gh-blue;
+        @include animation(".3s ease 3.6s pulse");
+    }
+    &.node-counter, &.official-counter {
+        padding: 0 0.25em;
+        border-radius: $container-border-radius;
+        color: white;
+    }
+    
+}
+ 
+ 
+.location-hero {
+
+    background: $color-wet-asphalt;
+    padding: 24px 0;
+
+}
+
+.location-heading-wrapper {
+
+    .hero-title {
+        font-size: 2.5em;
+        text-align: center;
+        @media screen and (min-width: 767px){
+            text-align: right;
+            html.csstransforms & {
+                transform: rotate(-2deg) translateY(24px) translateX(-6px);
+                text-align: center;
+            }
+        }
+    }
+
+    .hero-secondary {
+        font-style: normal;
+        font-family: $body-font;
+        text-align: center;
+
+        @media screen and (min-width: 767px){
+            text-align: center;
+            padding: $container-md-default-padding;
+            border: 1px solid $gh-border-grey;
+            border-radius: $container-border-radius;
+        }
+        
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+        @media screen and (min-width: 767px){
+            font-size: 1.6rem;            
+        }
+    }
+    
+    .flexbox & > .grid {
+        @media screen and (min-width: 767px){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            .locations-page-first-column {
+                flex: 2;
+            }
+            .locations-page-second-column {
+                flex: 3;
+            }
+        }
+    }
+    
+    .location-stat {
+        display: inline-block;
+        dt, dd {
+            display: inline-block;
+            margin: 0;
+        }
+    }
+    
+    .dot {
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        &.official {
+            background-color: $gh-pink;
+        }
+        &.node {
+            background-color: $gh-blue;
+        }
+    }
+    
+}
+
+ 
+.location-map {
+    width: 100%; 
+    min-height: 0;
+    height: 0;
+    transition: all .25s ease;
+    .gh-map-visible & {
+        min-height: 20vh;
+        height: 50vh;       // tba.
+    }
+}
+
+
+.location-finder-content-area {
+    background-color: $gh-darkgrey;
+    transition: all .8s ease;
+    
+    .gh-map-visible & {
+        @media screen and (min-width: 1020px){
+            position: relative;
+            min-height: 40px;
+            background: transparent;
+        }
+    
+        .location-finder-nav {
+            @media screen and (min-width: 1020px){
+                border-radius: 6px;
+                position: relative;
+                top: -40px;
+                left: 0;
+                right: 0;
+                z-index: 2000;      // gotta beat the leaflet
+                box-shadow: 0 3px 6px rgba(40,40,40,.3);
+            }
+            .location-area {
+                @media screen and (min-width: 1020px){
+                    text-align: left;
+                }
+            }
+        }
+    }
+    
+    .location-finder-nav {
+        @extend %container;
+        background-color: $gh-darkgrey;
+        color: white;
+        
+        .map-toggle {
+            float: right;
+        }
+
+        .location-area-button-wrapper {
+            display: inline-block;
+            @media screen and (min-width: 767px){
+                html.flexbox & {
+                    display: flex;
+                    justify-content: center;
+                    justify-content: space-around;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                }
+            }            
+            .location-area {
+                $location-button-margin: $grid-default-margin / 2;
+                text-align: center;
+                margin: 0 $location-button-margin $location-button-margin 0;
+                @media screen and (min-width: 767px){
+                    margin: 0;
+                }
+            }
+        }
+        
+    }
+
+}
+
+.location-region {
+
+    transition: all .3s ease;
+
+    &.filter-hidden, 
+    & > .filter-hidden {
+        display: none;
+        &.filter-default-display {
+            display: block;
+        }
+    }
+    
+
+    .location-region-name {
+        text-transform: uppercase;
+        text-align: center;
+        &::before {
+            content: "";
+            display: block;
+            height: $thick-hr-height;
+            background: $gh-border-grey;
+            margin: 1em 0;
+        }
+        @media screen and (min-width: 767px){
+            text-align: left;
+        }
+    }
+    
+    .grid {
+       // display: flex;
+       // align-items: center;
+       // justify-content: center;
+       // flex-flow: column wrap;
+       // align-content: stretch;
+   }
+
+}
+
+
+.location-card {
+    
+    margin-bottom: $grid-default-margin;
+    border: 2px solid $gh-border-grey;
+    border-radius: $container-border-radius;
+    
+    &.filter-hidden {
+        display: none;
+    }
+    
+    .card-header {
+        $card-header-padding: $content-area-padding / 2;
+        padding: $card-header-padding;
+        border-bottom: 2px solid $gh-border-grey;
+        .card-heading {
+            margin-bottom: .15em;
+        }
+        .card-subheading {
+            @include muted;
+            font-family: $body-font; 
+            font-weight: normal;
+            font-size: 1em;
+            font-style: italic;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+    .entry-content, .card-footer {
+        padding: $content-area-padding / 2;
+    }
+    
+}
+
+.page-template-locations-page {
+    .button-minimal {
+        font-size: 90%;
+        padding: 7px 16px;
+        
+        @extend %noselect;
+        &.location-official {
+            @include button-minimal($gh-pink);
+        }
+        &.location-node, 
+        &.location-theme-node, 
+        &.location-youth-node, 
+        &.location-maker-node {
+            @include button-minimal($gh-blue);
+        }
+        &.location-area {
+            @include button-minimal(white);
+        }
+        &.location-area.location-unchecked {
+            @include button-minimal($gh-grey);
+        }
+        @media screen and (min-width: 600px){
+            font-size: 80%;
+            padding: 6px 14px;
+        }
+    }
+    
+    .content-area {
+        @media screen and (min-width: 1020px){
+            margin-top: -40px;
+        }
+    }
+    
+}

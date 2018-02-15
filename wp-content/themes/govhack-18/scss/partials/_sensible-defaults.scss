@@ -1,0 +1,31 @@
+/*=======================
+ * Sensible SCSS
+ * These are sensible defaults, I personally think it makes stuff look better
+ * For the purposes of overriding stuff that was set in the parent WP theme
+ * GH '16  Theme 
+ * @author AY
+ *=======================*/
+ 
+
+.content-area {
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 300;
+    }
+}
+
+a.button {
+    &.gh-pink {
+        background: $gh-pink;
+    }
+    &.gh-pink:hover, &.gh-pink:focus, &.gh-pink:active {
+        background: darken($gh-pink, 10%);
+    }
+    &.gh-blue {
+        background: $gh-blue;
+    }
+    &.gh-blue:hover, &.gh-blue:focus, &.gh-blue:active {
+        background: darken($gh-blue, 10%);
+    }
+}
+
+

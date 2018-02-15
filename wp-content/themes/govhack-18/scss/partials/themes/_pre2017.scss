@@ -1,0 +1,139 @@
+.home-hero-pre2017 {
+  background: url('/wp-content/uploads/2017/07/hero_tickets.jpg') no-repeat center center/cover transparent;
+
+  &.during {
+    background: url('/wp-content/uploads/2017/07/liftoff.jpg') no-repeat center center/cover transparent;
+    .button.fix-width {
+      width: 350px;
+    }
+  }
+  &.after {
+    background: url('/wp-content/uploads/2017/06/hero.jpg') no-repeat center center/cover transparent;
+  }
+  &.post-comp {
+    background: url('/wp-content/uploads/2017/08/hero_medals.jpg') no-repeat center center/cover transparent;
+  }
+  &.rca {
+    background: url('/wp-content/uploads/2017/09/red_carpet.jpg') no-repeat center center/cover transparent;
+  }
+
+  max-height: 350px;
+  overflow: hidden;
+  padding: 1rem 0 !important;
+  text-align: left;
+
+  a::after {
+    display: none;
+  }
+
+  .first-button {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  h1 {
+    font-size: 2.7em !important;
+    padding-top: 1.5rem;
+  }
+
+  @media screen and (max-width: 1024px) {
+    h1 {
+      font-size: 1.6em !important;
+      padding: 1rem;
+    }
+    text-align: left;
+    height: auto;
+    max-height: 700px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1230px) {
+    h1 {
+      font-size: 2em !important;
+      padding: 1rem;
+    }
+    text-align: left;
+  }
+  @media screen and (max-width: 780px) {
+    h1 {
+      font-size: 2em !important;
+      padding: 1rem;
+    }
+    text-align: center;
+    .first-button {
+      display: inline-block;
+      margin-right: auto;
+    }
+  }
+  @media screen and (max-width: 490px) {
+    h1 {
+      font-size: 1.8em !important;
+      padding: 1rem;
+    }
+    &.during {
+      h1 {
+        font-size: 1.8rem !important;
+      }
+    }
+    .hero-inner {
+      margin: 20px !important;
+      .gh-blue {
+        margin-bottom: 10px;
+      }
+      .first-button {
+        display: inline-block;
+        margin-right: auto;
+      }
+    }
+    text-align: center;
+  }
+  @media screen and (min-width: 500px) and (max-width: 750px) {
+    h1 {
+      font-size: 1.5em !important;
+      padding: 1rem;
+    }
+    .hero-inner {
+      margin: 20px !important;
+      .gh-blue {
+        margin-bottom: 10px;
+      }
+      .first-button {
+        display: inline-block;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .gh-pre2017-pin-map {
+    display: block;
+    margin: 0 auto;
+    width: 240px;
+    height: auto;
+    @media screen and (min-width: 1024px) {
+      width: 320px;
+      height: auto;
+      margin-left: -25px;
+    }
+  }
+
+  .gh-2016-review-coverpage {
+    display: block;
+    margin: 0 auto;
+    width: 280px;
+    transform: rotate(-2deg);
+    @media screen and (min-width: 768px) {
+      width: 200px;
+      margin-left: -25px;
+    }
+  }
+
+  .hero-inner {
+    margin: 20px 0;
+  }
+
+}
+
+.home-hero-pre2017 {
+  a:not([class^=button]) {
+    text-decoration: none;
+    border: none;
+  }
+}

@@ -1,0 +1,121 @@
+//========================
+// Marketing landing pages
+//========================
+
+// Some specific stuff that being a landing page would 
+// affect vs the normal flow
+body.gh-landing {
+    .site .site-header {
+        
+        display: none;      // the great experiement
+        
+        background-image: none;
+        background-position: center center;
+        background-color: $gh-darkgrey;
+    }
+    
+}
+
+
+.landing-hero {
+
+    position: relative;
+
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: $gh-darkgrey;
+    
+    padding: 2em 20px;
+    min-height: 140px;
+    
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 8px rgba(0,0,0,0.3);
+    
+    @media screen and (min-width: 768px){
+        min-height: 40vh;
+        padding: 4em 20px 2em;
+    }
+    
+    // Funkeh filters
+    -webkit-filter: saturate(60%); /* Chrome, Safari, Opera */
+    filter: saturate(60%);
+    transition: filter 0.2s ease;
+    
+    // Make a darkening filter screen thing
+    &::before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 0;
+    }
+    
+    // Try making the hero-header display in the middle, but 
+    // dont bother if no flexbox
+    .flexbox & {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    
+    .hero-header {
+        margin: 0 0 .5em;
+    }
+    .hero-heading {
+        font-family: $title-font;
+        font-size: 2em;
+        line-height: 1.15;
+    }
+    .hero-subheading {
+        font-family: $body-font;
+        font-size: 1em;
+        font-weight: 100;
+        font-style: italic;
+    }
+    .hero-cta {
+        font-size: 0.9em;
+        margin: 1em 0;
+    }
+    
+    @media screen and (min-width: 768px){
+        min-height: 300px;
+        .hero-heading {
+            font-size: 3.25em;
+        }
+        .hero-subheading {
+            font-size: 2em;
+        }
+        .hero-cta {
+            font-size: 1.15em;
+        }
+    }
+
+}
+
+.landing-content {
+    .content-area {
+
+        position: relative;
+
+        // Every single inline image gets considered as a bottom-of-stratum decoration element
+        img.sticky-bottom {
+            position: relative;
+            bottom: -2.8em;
+        }
+        p img.sticky-bottom {
+            margin-bottom: -28.5px;                               // approximate fallback
+            margin-bottom: calc(-24px - 0.35em);         // offsetting the line-height
+        }
+    }
+    
+    
+    .content-area-gray {
+        color: $color-concrete;
+    }
+}
